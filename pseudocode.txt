@@ -17,3 +17,9 @@ If RandomNumber is equal to 1 return Paper
 If RandomNumber is equal to 2 return Scissors
 
 print getComputerChoice
+
+
+Step 2: Write the logic to get the human choice
+write a function that takes the user choice and returns it.
+
+Create a function getHumanChoice
