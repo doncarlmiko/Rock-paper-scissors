@@ -1,0 +1,19 @@
+Step 1: write a function that randomly returns “rock”, “paper” or “scissors”.
+
+Create a function getComputerChoice
+
+create a string variable Rock for function getComputerChoice
+create a string variable Paper for function getComputerChoice
+create a string variable Scissors for function getComputerChoice
+create an integer variable RandomNumber for function getComputerChoice
+
+put "Rock" in Rock
+put "Paper" in Paper
+put "Scissors" in Scissors
+put Math.floor(Math.random() * 3) in RandomNumber
+
+If RandomNumber is equal to 0 return Rock
+If RandomNumber is equal to 1 return Paper
+If RandomNumber is equal to 2 return Scissors
+
+print getComputerChoice
