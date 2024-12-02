@@ -38,40 +38,56 @@
     //Create a function getHumanChoice()
     function getHumanChoice(){
 
-        //create a variable string userInput for function getHumanChoice()
-        //put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
-        const userInput = prompt("Pick one - Rock, Paper, Scissors: ", "");
+        let whileTrue = true;
 
-        //create a variable string Rock for function getHumanChoice()
-        //put "Rock" in Rock
-        const Rock = 'Rock';
+        while(whileTrue === true){
 
-        //create a variable string Paper for function getHumanChoice()
-        //put "Paper" in Paper
-        const Paper = 'Paper';
+            //create a variable string userInput for function getHumanChoice()
+            //put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
+            const userInput = prompt("Pick one - Rock, Paper, Scissors: ", "");
 
-        //create a variable string Scissors for function getHumanChoice()
-        //put "Scissors" in Scissors
-        const Scissors = 'Scissors';
+            //create a variable string Rock for function getHumanChoice()
+            //put "Rock" in Rock
+            const Rock = 'Rock';
 
-        //if userInput is equal to Rock, return Rock
-        if (userInput.toLowerCase() === Rock.toLowerCase()){
-            return Rock;
-        }
+            //create a variable string Paper for function getHumanChoice()
+            //put "Paper" in Paper
+            const Paper = 'Paper';
 
-        //If userInput is equal to Paper, return Paper
-        else if(userInput.toLowerCase() === Paper.toLowerCase()){
-            return Paper;
-        }
+            //create a variable string Scissors for function getHumanChoice()
+            //put "Scissors" in Scissors
+            const Scissors = 'Scissors';
+            
+            //Create a boolean variable whileTrue and put true
 
-        //If userInput is equal to Scissors, return Scissors
-        else if(userInput.toLowerCase() === Scissors.toLowerCase()){
-            return Scissors;
-        }
+            //If userInput is equal to null, return alert('Cancelled!')
+            if(userInput === null){
+                alert('Cancelled!');
+                return;
+            }
 
-        //Else, print alert('Please choose Rock, Paper or Scissors only!')
-        else{
-            return alert('Please choose, Rock, Paper or Scissors!');
+            //if userInput is equal to Rock, return Rock
+            else if (userInput.toLowerCase() === Rock.toLowerCase()){
+                whileTrue = false;
+                return Rock;
+            }
+
+            //If userInput is equal to Paper, return Paper
+            else if(userInput.toLowerCase() === Paper.toLowerCase()){
+                whileTrue = false;
+                return Paper;
+            }
+
+            //If userInput is equal to Scissors, return Scissors
+            else if(userInput.toLowerCase() === Scissors.toLowerCase()){
+                whileTrue = false;
+                return Scissors;
+            }
+
+            //Else, print alert('Please choose Rock, Paper or Scissors only!')
+            else if (whileTrue = true){
+                return alert('Please choose, Rock, Paper or Scissors!');
+            }
         }
     }
 
