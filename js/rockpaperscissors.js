@@ -40,7 +40,7 @@
 
         let whileTrue = true;
 
-        while(whileTrue === true){
+        while(whileTrue = true){
 
             //create a variable string userInput for function getHumanChoice()
             //put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
@@ -60,33 +60,33 @@
             
             //Create a boolean variable whileTrue and put true
 
-            //If userInput is equal to null, return alert('Cancelled!')
+            //If userInput is equal to null set whileTrue = false and return alert('Cancelled!')
             if(userInput === null){
                 alert('Cancelled!');
                 return;
             }
 
-            //if userInput is equal to Rock, return Rock
+            //if userInput is equal to Rock, set whileTrue = false and return Rock
             else if (userInput.toLowerCase() === Rock.toLowerCase()){
                 whileTrue = false;
                 return Rock;
             }
 
-            //If userInput is equal to Paper, return Paper
+            //If userInput is equal to Paper, set whileTrue = false and return Paper
             else if(userInput.toLowerCase() === Paper.toLowerCase()){
                 whileTrue = false;
                 return Paper;
             }
 
-            //If userInput is equal to Scissors, return Scissors
+            // If userInput is equal to Scissors, set whileTrue = false and return Scissors
             else if(userInput.toLowerCase() === Scissors.toLowerCase()){
                 whileTrue = false;
                 return Scissors;
             }
 
-            //Else, print alert('Please choose Rock, Paper or Scissors only!')
+            //If whileTrue is equal to true, alert('Please choose Rock, Paper or Scissors only!')
             else if (whileTrue = true){
-                return alert('Please choose, Rock, Paper or Scissors!');
+                 alert('Please choose, Rock, Paper or Scissors!');
             }
         }
     }

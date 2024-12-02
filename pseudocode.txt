@@ -29,7 +29,8 @@ write a function that takes the user choice and returns it.
 Create a function getHumanChoice()
 
    Create a boolean variable whileTrue and put true
-WHILE
+
+WHILE whileTrue = true
     create a variable string userInput for function getHumanChoice()
     create a variable string Rock for function getHumanChoice()
     create a variable string Paper for function getHumanChoice()
@@ -42,9 +43,9 @@ WHILE
 
     If userInput is equal to null set whileTrue = false and return alert('Cancelled!')
 
-    if userInput is equal to Rock, set whileTrue = false return Rock
-    If userInput is equal to Paper, set whileTrue = false return Paper
-    If userInput is equal to Scissors, set whileTrue = false return Scissors
+    if userInput is equal to Rock, set whileTrue = false and return Rock
+    If userInput is equal to Paper, set whileTrue = false and return Paper
+    If userInput is equal to Scissors, set whileTrue = false  and return Scissors
     If whileTrue is equal to true, alert('Please choose Rock, Paper or Scissors only!')
 
 
