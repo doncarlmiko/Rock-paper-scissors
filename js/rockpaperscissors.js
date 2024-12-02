@@ -68,6 +68,11 @@
         else if(userInput.toLowerCase().includes(Scissors.toLowerCase())){
             return Scissors;
         }
+        
+        //Else, print alert('Please choose Rock, Paper or Scissors only!')
+        else{
+            return alert('Please choose, Rock, Paper or Scissors!');
+        }
     }
 
 //create a variable humanSelection
