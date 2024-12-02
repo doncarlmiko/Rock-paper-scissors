@@ -19,7 +19,7 @@ If RandomNumber is equal to 2 return Scissors
 
 create a variable computerSelection
 set computerSelection to result of calling getComputerChoice()
-print getComputerChoice
+print computerSelection
 
 
 Step 2: Write the logic to get the human choice

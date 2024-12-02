@@ -35,5 +35,8 @@
         }
     }
 
-//print getComputerChoice
-console.log(getComputerChoice());
+//create a variable computerSelection set computerSelection to result of calling getComputerChoice()
+const computerSelection = getComputerChoice();
+
+// print computerSelection
+console.log(computerSelection);
