@@ -25,11 +25,13 @@ print computerSelection
 Step 2: Write the logic to get the human choice
 write a function that takes the user choice and returns it.
 
-create a variable string userInput
-create a variable string userResult
+
+Create a function getHumanChoice
+
+create a variable string userInput for function getHumanChoice()
+create a variable string userResult for function getHumanChoice()
+create a variable string Rock for function getHumanChoice()
+
 
 put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
 put userInput to userResult
-
-Create a function getHumanChoice
-Create a getUserResult parameter for getHumanChoice
