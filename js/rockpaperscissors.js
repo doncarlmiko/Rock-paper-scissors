@@ -55,20 +55,20 @@
         const Scissors = 'Scissors';
 
         //if userInput is equal to Rock, return Rock
-        if (userInput.toLowerCase().includes(Rock.toLowerCase())){
+        if (userInput.toLowerCase() === Rock.toLowerCase()){
             return Rock;
         }
 
         //If userInput is equal to Paper, return Paper
-        else if(userInput.toLowerCase().includes(Paper.toLowerCase())){
+        else if(userInput.toLowerCase() === Paper.toLowerCase()){
             return Paper;
         }
 
         //If userInput is equal to Scissors, return Scissors
-        else if(userInput.toLowerCase().includes(Scissors.toLowerCase())){
+        else if(userInput.toLowerCase() === Scissors.toLowerCase()){
             return Scissors;
         }
-        
+
         //Else, print alert('Please choose Rock, Paper or Scissors only!')
         else{
             return alert('Please choose, Rock, Paper or Scissors!');
