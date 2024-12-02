@@ -28,20 +28,23 @@ write a function that takes the user choice and returns it.
 
 Create a function getHumanChoice()
 
-create a variable string userInput for function getHumanChoice()
-create a variable string Rock for function getHumanChoice()
-create a variable string Paper for function getHumanChoice()
-create a variable string Scissors for function getHumanChoice()
+DO
+    create a variable string userInput for function getHumanChoice()
+    create a variable string Rock for function getHumanChoice()
+    create a variable string Paper for function getHumanChoice()
+    create a variable string Scissors for function getHumanChoice()
+    Create a boolean variable whileTrue and put true
 
-put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
-put "Rock" in Rock
-put "Paper" in Paper
-put "Scissors" in Scissors
+    put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
+    put "Rock" in Rock
+    put "Paper" in Paper
+    put "Scissors" in Scissors
 
-if userInput is equal to Rock, return Rock
-If userInput is equal to Paper, return Paper
-If userInput is equal to Scissors, return Scissors
-Else, print alert('Please choose Rock, Paper or Scissors only!')
+    if userInput is equal to Rock, return Rock
+    If userInput is equal to Paper, return Paper
+    If userInput is equal to Scissors, return Scissors
+    Else, print alert('Please choose Rock, Paper or Scissors only!')
+WHILE 
 
 create a variable humanSelection
 set humanSelection to result of calling getHumanChoice()
