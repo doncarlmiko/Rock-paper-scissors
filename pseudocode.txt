@@ -34,4 +34,10 @@ create a variable string Paper for function getHumanChoice()
 create a variable string Scissors for function getHumanChoice()
 
 put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
+put "Rock" in Rock
+put "Paper" in Paper
+put "Scissors" in Scissors
 
+if userInput is equal to Rock, return Rock
+If userInput is equal to Paper, return Paper
+If userInput is equal to Scissors, return Scissors
