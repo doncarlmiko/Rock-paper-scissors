@@ -26,7 +26,7 @@ Step 2: Write the logic to get the human choice
 write a function that takes the user choice and returns it.
 
 
-Create a function getHumanChoice
+Create a function getHumanChoice()
 
 create a variable string userInput for function getHumanChoice()
 create a variable string Rock for function getHumanChoice()
@@ -41,3 +41,7 @@ put "Scissors" in Scissors
 if userInput is equal to Rock, return Rock
 If userInput is equal to Paper, return Paper
 If userInput is equal to Scissors, return Scissors
+
+create a variable humanSelection
+set humanSelection to result of calling getHumanChoice()
+print humanSelection
