@@ -1,5 +1,6 @@
 Step 1: write a function that randomly returns “rock”, “paper” or “scissors”.
 
+
 Create a function getComputerChoice
 
 create a string variable Rock for function getComputerChoice
@@ -16,10 +17,19 @@ If RandomNumber is equal to 0 return Rock
 If RandomNumber is equal to 1 return Paper
 If RandomNumber is equal to 2 return Scissors
 
+create a variable computerSelection
+set computerSelection to result of calling getComputerChoice()
 print getComputerChoice
 
 
 Step 2: Write the logic to get the human choice
 write a function that takes the user choice and returns it.
 
+create a variable string userInput
+create a variable string userResult
+
+put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
+put userInput to userResult
+
 Create a function getHumanChoice
+Create a getUserResult parameter for getHumanChoice
