@@ -29,7 +29,6 @@ write a function that takes the user choice and returns it.
 Create a function getHumanChoice
 
 create a variable string userInput for function getHumanChoice()
-create a variable string userResult for function getHumanChoice()
 create a variable string Rock for function getHumanChoice()
 
 
