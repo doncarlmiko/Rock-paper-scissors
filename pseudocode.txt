@@ -41,6 +41,7 @@ put "Scissors" in Scissors
 if userInput is equal to Rock, return Rock
 If userInput is equal to Paper, return Paper
 If userInput is equal to Scissors, return Scissors
+Else, print alert('Please choose Rock, Paper or Scissors only!')
 
 create a variable humanSelection
 set humanSelection to result of calling getHumanChoice()
