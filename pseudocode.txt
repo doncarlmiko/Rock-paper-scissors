@@ -30,7 +30,8 @@ Create a function getHumanChoice
 
 create a variable string userInput for function getHumanChoice()
 create a variable string Rock for function getHumanChoice()
-
+create a variable string Paper for function getHumanChoice()
+create a variable string Scissors for function getHumanChoice()
 
 put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
 put userInput to userResult
