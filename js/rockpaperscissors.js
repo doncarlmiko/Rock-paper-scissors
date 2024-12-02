@@ -35,8 +35,37 @@
         }
     }
 
+    
+    function getHumanChoice(){
+        const userInput = prompt("Pick one - Rock, Paper, Scissors: ", "");
+
+        const Rock = 'Rock';
+        const Paper = 'Paper';
+        const Scissors = 'Scissors';
+
+        if (userInput.toLowerCase().includes(Rock.toLowerCase())){
+            return Rock;
+        }
+        else if(userInput.toLowerCase().includes(Paper.toLowerCase())){
+            return Paper;
+        }
+
+        else if(userInput.toLowerCase().includes(Scissors.toLowerCase())){
+            return Scissors;
+        }
+    }
+
+
+
+
+
+
+
+
+
 //create a variable computerSelection set computerSelection to result of calling getComputerChoice()
 const computerSelection = getComputerChoice();
 
 // print computerSelection
 console.log(computerSelection);
+
