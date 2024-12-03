@@ -68,5 +68,9 @@ print 'Human player choose' humanSelection
 
 create a function playRound()
 define two parameters for playRound() : humanChoice, computerChoice
+
 create string variable getHumanChoice
+create string variable getComputerChoice
+
 set getHumanChoice = humanChoice
+set getComputerChoice = computerChoice
