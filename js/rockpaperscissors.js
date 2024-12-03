@@ -96,14 +96,14 @@
 const humanSelection = getHumanChoice();
 
 //print humanSelection
-console.log(humanSelection);
+console.log(`Human choose: ${humanSelection}!`);
 
 //create a variable computerSelection 
 //set computerSelection to result of calling getComputerChoice()
 const computerSelection = getComputerChoice();
 
 // print computerSelection
-console.log(computerSelection);
+console.log(`Computer choose: ${computerSelection}!`);
 
 
 //Create an integer variable humanScore and put 0
