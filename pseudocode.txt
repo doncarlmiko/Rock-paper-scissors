@@ -60,11 +60,11 @@ write a function that takes the human and computer player choices as arguments, 
 
 create a variable computerSelection
 set computerSelection to result of calling getComputerChoice()
-print computerSelection
+print 'Computer choose' computerSelection
 
 create a variable humanSelection
 set humanSelection to result of calling getHumanChoice()
-print humanSelection
+print 'Human player choose' humanSelection
 
 create a function playRound()
 
