@@ -52,3 +52,7 @@ WHILE whileTrue = true
 create a variable humanSelection
 set humanSelection to result of calling getHumanChoice()
 print humanSelection
+
+Create an integer variable humanScore and put 0
+create an integer variable computerScore and put 0
+

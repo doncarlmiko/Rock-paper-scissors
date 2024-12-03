@@ -105,3 +105,9 @@ const computerSelection = getComputerChoice();
 // print computerSelection
 console.log(computerSelection);
 
+
+//Create an integer variable humanScore and put 0
+//create an integer variable computerScore and put 0
+let humanScore = 0;
+let computerScore = 0;
+
