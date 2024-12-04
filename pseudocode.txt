@@ -69,13 +69,13 @@ print 'Human player choose' humanSelection
 create a function playRound()
 define two parameters for playRound() : humanChoice, computerChoice
 
-create string variable getHumanChoice
-create string variable getComputerChoice
+create string variable getHumanChoice for playRound()
+create string variable getComputerChoice for playRound()
 
 set getHumanChoice = humanChoice
 set getComputerChoice = computerChoice
  
- create an array variable playerChoices and put ["Rock","Paper","Scissors"]
+ create an array variable playerChoices["Rock","Paper","Scissors"] for playRound()
 
  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], return "You lose! Paper beats Rock"
 
@@ -88,3 +88,5 @@ set getComputerChoice = computerChoice
   If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], return "You lose! Rock beats Scissors."
   
   If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1], return "You win! Scissors beats Paper."
+
+  call playRound(humanSelection, computerSelection)

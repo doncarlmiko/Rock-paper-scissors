@@ -114,6 +114,13 @@ let computerScore = 0;
 //create a function playRound()
 //define two parameters for playRound() : humanChoice, computerChoice
 function playRound(humanChoice, computerChoice){
-    const getHumanChoice = humanChoice;
-    const getComputerChoice = computerChoice;
+    const getHumanChoice = humanChoice.toLowerCase();
+    const getComputerChoice = computerChoice.toLowerCase();
+    const playerChoices = ["Rock","Paper","Scissors"];
+
+    if (getHumanChoice == playerChoices[0].toLowerCase() && getComputerChoice == playerChoices[1].toLowerCase()){
+        return console.log(`You lose! Paper beats Rock`);
+    }
 }
+
+playRound(humanSelection, computerSelection);
