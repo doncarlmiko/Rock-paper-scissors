@@ -74,3 +74,5 @@ create string variable getComputerChoice
 
 set getHumanChoice = humanChoice
 set getComputerChoice = computerChoice
+ 
+ create an array variable playerChoices and put ["Rock","Paper","Scissors"]
