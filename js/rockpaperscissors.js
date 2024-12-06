@@ -111,6 +111,9 @@ console.log(`Computer choose: ${computerSelection}!`);
 let humanScore = 0;
 let computerScore = 0;
 
+console.log(humanScore);
+console.log(computerScore);
+
 //create a function playRound()
 //define two parameters for playRound() : humanChoice, computerChoice
 function playRound(humanChoice, computerChoice){
