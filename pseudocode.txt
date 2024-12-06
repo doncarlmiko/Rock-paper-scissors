@@ -77,16 +77,29 @@ set getComputerChoice = computerChoice
  
  create an array variable playerChoices["Rock","Paper","Scissors"] for playRound()
 
- If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], increment computerScore++ and return "You lose! Paper beats Rock"
+ If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], increment computerScore++ , 
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Paper beats Rock"
 
-  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[2], increment humanScore++ return "You win! Rock beats Scissors"
+  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[2], increment humanScore++ , 
 
-  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[0], increment humanScore++ and return "You win! Paper beats Rock."
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Rock beats Scissors"
 
-  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[2], increment computerScore++ and return "You lose! Scissors beats Paper."
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[0], increment humanScore++ , 
 
-  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], increment computerScore++ and return "You lose! Rock beats Scissors."
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Paper beats Rock."
+
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[2], increment computerScore++ , 
   
-  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1],  increment humanScore++ and return "You win! Scissors beats Paper."
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Scissors beats Paper."
 
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], increment computerScore++, 
+  
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Rock beats Scissors."
+  
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1],  increment humanScore++, 
+  
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Scissors beats Paper."
+  
+  else print "It's a tie!"
+  
   call playRound(humanSelection, computerSelection)
