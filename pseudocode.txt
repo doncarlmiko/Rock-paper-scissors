@@ -77,16 +77,16 @@ set getComputerChoice = computerChoice
  
  create an array variable playerChoices["Rock","Paper","Scissors"] for playRound()
 
- If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], return "You lose! Paper beats Rock"
+ If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], set computerScore++ and return "You lose! Paper beats Rock"
 
-  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[2], return "You win! Rock beats Scissors"
+  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[2], set humanScore++ and return "You win! Rock beats Scissors"
 
-  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[0], return "You win! Paper beats Rock."
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[0], set humanScore++ and return "You win! Paper beats Rock."
 
-  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[2], return "You lose! Scissors beats Paper."
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[2], set computerScore++ and return "You lose! Scissors beats Paper."
 
-  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], return "You lose! Rock beats Scissors."
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], set computerScore++ and return "You lose! Rock beats Scissors."
   
-  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1], return "You win! Scissors beats Paper."
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1], set humanScore++ and return "You win! Scissors beats Paper."
 
   call playRound(humanSelection, computerSelection)
