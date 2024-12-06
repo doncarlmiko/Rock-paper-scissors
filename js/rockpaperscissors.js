@@ -111,9 +111,6 @@ console.log(`Computer choose: ${computerSelection}!`);
 let humanScore = 0;
 let computerScore = 0;
 
-console.log(humanScore);
-console.log(computerScore);
-
 //create a function playRound()
 //define two parameters for playRound() : humanChoice, computerChoice
 function playRound(humanChoice, computerChoice){
@@ -151,7 +148,7 @@ function playRound(humanChoice, computerChoice){
     else if (getHumanChoice == playerChoices[2].toLowerCase() && getComputerChoice == playerChoices[0].toLowerCase()){
         computerScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
-        
+
         return console.log("You lose! Rock beats Scissors.");
     }
 
@@ -164,7 +161,6 @@ function playRound(humanChoice, computerChoice){
     else{
         return console.log("It's a tie!");
     }
-    
 }
 
 playRound(humanSelection, computerSelection);

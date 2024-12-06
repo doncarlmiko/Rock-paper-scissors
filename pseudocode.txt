@@ -100,6 +100,6 @@ set getComputerChoice = computerChoice
   
   print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Scissors beats Paper."
   
-  else print "It's a tie!"
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "It's a tie!"
   
   call playRound(humanSelection, computerSelection)
