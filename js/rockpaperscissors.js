@@ -122,25 +122,31 @@ function playRound(humanChoice, computerChoice){
     const playerChoices = ["Rock","Paper","Scissors"];
 
     if (getHumanChoice == playerChoices[0].toLowerCase() && getComputerChoice == playerChoices[1].toLowerCase()){
+        computerScore++;
         return console.log(`You lose! Paper beats Rock`);
     }
     else if (getHumanChoice == playerChoices[0].toLowerCase() && getComputerChoice == playerChoices[2].toLowerCase()){
+        humanScore++;
         return console.log("You win! Rock beats Scissors");
     }
 
     else if (getHumanChoice == playerChoices[1].toLowerCase() && getComputerChoice == playerChoices[0].toLowerCase()){
+        humanScore++;
         return console.log("You win! Paper beats Rock.");
     }
 
     else if (getHumanChoice == playerChoices[1].toLowerCase() && getComputerChoice == playerChoices[2].toLowerCase()){
+        computerScore++;
         return console.log("You lose! Scissors beats Paper.");
     }
 
     else if (getHumanChoice == playerChoices[2].toLowerCase() && getComputerChoice == playerChoices[0].toLowerCase()){
+        computerScore++;
         return console.log("You lose! Rock beats Scissors.");
     }
 
     else if (getHumanChoice == playerChoices[2].toLowerCase() && getComputerChoice == playerChoices[1].toLowerCase()){
+        humanScore++;
         return console.log("You win! Scissors beats Paper.");
     }
     
