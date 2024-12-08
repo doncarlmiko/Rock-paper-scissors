@@ -25,7 +25,6 @@ print computerSelection
 Step 2: Write the logic to get the human choice
 write a function that takes the user choice and returns it.
 
-
 Create a function getHumanChoice()
 
    Create a boolean variable whileTrue and put true
@@ -49,10 +48,85 @@ WHILE whileTrue = true
     If whileTrue is equal to true, alert('Please choose Rock, Paper or Scissors only!')
 
 
-create a variable humanSelection
-set humanSelection to result of calling getHumanChoice()
-print humanSelection
+Step 4: Declare the players score variables
 
+write variables to keep track of the players score
 Create an integer variable humanScore and put 0
 create an integer variable computerScore and put 0
 
+
+Step 5: Write the logic to play a single round
+write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
+
+create a variable computerSelection
+set computerSelection to result of calling getComputerChoice()
+print 'Computer choose' computerSelection
+
+create a variable humanSelection
+set humanSelection to result of calling getHumanChoice()
+print 'Human player choose' humanSelection
+
+create a function playRound()
+define two parameters for playRound() : humanChoice, computerChoice
+
+create string variable getHumanChoice for playRound()
+create string variable getComputerChoice for playRound()
+
+set getHumanChoice = humanChoice
+set getComputerChoice = computerChoice
+ 
+ create an array variable playerChoices["Rock","Paper","Scissors"] for playRound()
+
+ If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], increment computerScore++ , 
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Paper beats Rock"
+
+  If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[2], increment humanScore++ , 
+
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Rock beats Scissors"
+
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[0], increment humanScore++ , 
+
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Paper beats Rock."
+
+  If getHumanChoice  = playerChoices[1] and getComputerChoice = playerChoices[2], increment computerScore++ , 
+  
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Scissors beats Paper."
+
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[0], increment computerScore++, 
+  
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Rock beats Scissors."
+  
+  If getHumanChoice  = playerChoices[2] and getComputerChoice = playerChoices[1],  increment humanScore++, 
+  
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Scissors beats Paper."
+  
+  else 
+  print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "It's a tie!"
+  
+  call playRound(humanSelection, computerSelection)
+
+
+  Step 6: Write the logic to play the entire game
+  Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end. 
+
+  create a function playGame()
+  create a string variable loopRound
+
+  Loop loopRound from 1 to five
+  create a variable humanSelection
+  set humanSelection to result of calling getHumanChoice()
+
+  create a variable computerSelection
+  set computerSelection to result of calling getComputerChoice()
+  
+  call playRound(humanSelection, computerSelection)
+
+
+  print `\nFinal Score: Human: ${humanScore}, Computer: ${computerScore}`
+
+  If humanScore > computerScore print "Congratulations! You win the game!"
+
+  If computerScore > humanScore "You lose! Better luck next time."
+  If computerScore = humanScore "It's a tie game!"
+  
+  print playGame()
