@@ -108,3 +108,25 @@ set getComputerChoice = computerChoice
 
   Step 6: Write the logic to play the entire game
   Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end. 
+
+  create a function playGame()
+  create a string variable loopRound
+
+  Loop loopRound from 1 to five
+  create a variable humanSelection
+  set humanSelection to result of calling getHumanChoice()
+
+  create a variable computerSelection
+  set computerSelection to result of calling getComputerChoice()
+  
+  call playRound(humanSelection, computerSelection)
+
+
+  print `\nFinal Score: Human: ${humanScore}, Computer: ${computerScore}`
+
+  If humanScore > computerScore print "Congratulations! You win the game!"
+
+  If computerScore > humanScore "You lose! Better luck next time."
+  If computerScore = humanScore "It's a tie game!"
+  
+  print playGame()

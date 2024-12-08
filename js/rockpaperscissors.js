@@ -95,15 +95,12 @@
 //set humanSelection to result of calling getHumanChoice()
 const humanSelection = getHumanChoice();
 
-//print humanSelection
-console.log(`Human choose: ${humanSelection}!`);
 
 //create a variable computerSelection 
 //set computerSelection to result of calling getComputerChoice()
 const computerSelection = getComputerChoice();
 
-// print computerSelection
-console.log(`Computer choose: ${computerSelection}!`);
+
 
 
 //Create an integer variable humanScore and put 0
@@ -128,6 +125,9 @@ function playRound(humanChoice, computerChoice){
     // If getHumanChoice  = playerChoices[0] and getComputerChoice = playerChoices[1], increment computerScore++ , 
     //print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Paper beats Rock"
     if (getHumanChoice == playerChoices[0].toLowerCase() && getComputerChoice == playerChoices[1].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         computerScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -138,6 +138,9 @@ function playRound(humanChoice, computerChoice){
 
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Rock beats Scissors"*/
     else if (getHumanChoice == playerChoices[0].toLowerCase() && getComputerChoice == playerChoices[2].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         humanScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -149,6 +152,9 @@ function playRound(humanChoice, computerChoice){
 
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Paper beats Rock." */
     else if (getHumanChoice == playerChoices[1].toLowerCase() && getComputerChoice == playerChoices[0].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         humanScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -159,6 +165,9 @@ function playRound(humanChoice, computerChoice){
   
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Scissors beats Paper." */
     else if (getHumanChoice == playerChoices[1].toLowerCase() && getComputerChoice == playerChoices[2].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         computerScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -170,6 +179,9 @@ function playRound(humanChoice, computerChoice){
   
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You lose! Rock beats Scissors." */
     else if (getHumanChoice == playerChoices[2].toLowerCase() && getComputerChoice == playerChoices[0].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         computerScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -181,6 +193,9 @@ function playRound(humanChoice, computerChoice){
   
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "You win! Scissors beats Paper."*/
     else if (getHumanChoice == playerChoices[2].toLowerCase() && getComputerChoice == playerChoices[1].toLowerCase()){
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         humanScore++;
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
 
@@ -191,11 +206,38 @@ function playRound(humanChoice, computerChoice){
     /*else 
     print `Current Score - Human: ${humanScore}, Computer: ${computerScore}` and return "It's a tie!" */
     else{
+        console.log(`Human choose: ${getHumanChoice}!`);
+        // print computerSelection
+        console.log(`Computer choose: ${getComputerChoice}!`);
         console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
         return console.log("It's a tie!");
     }
 }
 
 //call playRound(humanSelection, computerSelection)
-playRound(humanSelection, computerSelection);
+//playRound(humanSelection, computerSelection);
+
+
+
+function playGame(){
+    let loopRound;
+    for(loopRound = 0; loopRound < 5; loopRound++){
+        // Get new choices for each round
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+    }
+
+    console.log(`\nFinal Score: Human: ${humanScore}, Computer: ${computerScore}`);
+    if (humanScore > computerScore) {
+        console.log("Congratulations! You win the game!");
+    } else if (computerScore > humanScore) {
+        console.log("You lose! Better luck next time.");
+    } else {
+        console.log("It's a tie game!");
+    }
+}
+
+console.log(playGame());
 
