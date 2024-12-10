@@ -44,7 +44,7 @@
 
             //create a variable string userInput for function getHumanChoice()
             //put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
-            const userInput = prompt("Pick one - Rock, Paper, Scissors: ", "");
+            const userInput = prompt("Pick one - Rock, Paper, Scissors: ");
 
             //create a variable string Rock for function getHumanChoice()
             //put "Rock" in Rock
@@ -63,11 +63,11 @@
             //If userInput is equal to null set whileTrue = false and return alert('Cancelled!')
             if(userInput === null){
                 alert('Cancelled!');
-                return;
+                return null;
             }
 
             //if userInput is equal to Rock, set whileTrue = false and return Rock
-            else if (userInput.toLowerCase() === Rock.toLowerCase()){
+             if (userInput.toLowerCase() === Rock.toLowerCase()){
                 whileTrue = false;
                 return Rock;
             }
@@ -93,12 +93,12 @@
 
 //create a variable humanSelection
 //set humanSelection to result of calling getHumanChoice()
-const humanSelection = getHumanChoice();
+//const humanSelection = getHumanChoice();
 
 
 //create a variable computerSelection 
 //set computerSelection to result of calling getComputerChoice()
-const computerSelection = getComputerChoice();
+//const computerSelection = getComputerChoice();
 
 
 
@@ -217,15 +217,23 @@ function playRound(humanChoice, computerChoice){
 //call playRound(humanSelection, computerSelection)
 //playRound(humanSelection, computerSelection);
 
-
-
 function playGame(){
     let loopRound;
-    for(loopRound = 0; loopRound < 5; loopRound++){
+    for(loopRound = 1; loopRound <= 5; loopRound++){
         // Get new choices for each round
         const humanSelection = getHumanChoice();
+        if (humanSelection === null) {
+            // Exit the game if the user cancels
+            console.log("Game cancelled by the user.");
+            return;
+        }
+
         const computerSelection = getComputerChoice();
 
+        //console.log(`Human chose: ${humanSelection}`);
+        //console.log(`Computer chose: ${computerSelection}`);
+
+        // Play a round and update scores
         playRound(humanSelection, computerSelection);
     }
 
@@ -239,5 +247,5 @@ function playGame(){
     }
 }
 
-console.log(playGame());
+playGame();
 
