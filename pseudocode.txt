@@ -17,10 +17,6 @@ If RandomNumber is equal to 0 return Rock
 If RandomNumber is equal to 1 return Paper
 If RandomNumber is equal to 2 return Scissors
 
-create a variable computerSelection
-set computerSelection to result of calling getComputerChoice()
-print computerSelection
-
 
 Step 2: Write the logic to get the human choice
 write a function that takes the user choice and returns it.
@@ -57,14 +53,6 @@ create an integer variable computerScore and put 0
 
 Step 5: Write the logic to play a single round
 write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
-
-create a variable computerSelection
-set computerSelection to result of calling getComputerChoice()
-print 'Computer choose' computerSelection
-
-create a variable humanSelection
-set humanSelection to result of calling getHumanChoice()
-print 'Human player choose' humanSelection
 
 create a function playRound()
 define two parameters for playRound() : humanChoice, computerChoice
@@ -112,6 +100,10 @@ set getComputerChoice = computerChoice
   create a function playGame()
   create a string variable loopRound
 
+    create a variable humanSelection
+    set humanSelection to result of calling getHumanChoice()
+    print 'Human player choose' humanSelection
+  
   Loop loopRound from 1 to five
   create a variable humanSelection
   set humanSelection to result of calling getHumanChoice()
