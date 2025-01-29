@@ -91,17 +91,6 @@
         }
     }
 
-//create a variable humanSelection
-//set humanSelection to result of calling getHumanChoice()
-//const humanSelection = getHumanChoice();
-
-
-//create a variable computerSelection 
-//set computerSelection to result of calling getComputerChoice()
-//const computerSelection = getComputerChoice();
-
-
-
 
 //Create an integer variable humanScore and put 0
 //create an integer variable computerScore and put 0
@@ -221,6 +210,10 @@ function playGame(){
     let loopRound;
     for(loopRound = 1; loopRound <= 5; loopRound++){
         // Get new choices for each round
+
+        //create a variable humanSelection
+        //set humanSelection to result of calling getHumanChoice()
+        //const humanSelection = getHumanChoice();
         const humanSelection = getHumanChoice();
         if (humanSelection === null) {
             // Exit the game if the user cancels
@@ -228,6 +221,9 @@ function playGame(){
             return;
         }
 
+        //create a variable computerSelection 
+        //set computerSelection to result of calling getComputerChoice()
+        //const computerSelection = getComputerChoice();
         const computerSelection = getComputerChoice();
 
         //console.log(`Human chose: ${humanSelection}`);
