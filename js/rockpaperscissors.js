@@ -2,17 +2,20 @@ const rockHumanChoice = document.querySelector('#Rock');
 const scissorsHumanChoice = document.querySelector('#Scissors');
 const paperHumanChoice = document.querySelector('#Paper');
 
-rockHumanChoice.addEventListener('click',()=>{
-    console.log(rockHumanChoice.textContent);
+rockHumanChoice.addEventListener('click', ()=>{
+    const computerWinner = getComputerChoice();
+
+    const humanRockWinner = 
+    computerWinner == scissorsHumanChoice.textContent ? rockHumanChoice.textContent : 
+    computerWinner == paperHumanChoice.textContent ? 
+    false : `It's a tie!`;
+
+    playRound(humanRockWinner,computerWinner);
 });
 
-scissorsHumanChoice.addEventListener('click',()=>{
-    console.log(scissorsHumanChoice.textContent);
-});
+scissorsHumanChoice.addEventListener('click',()=>getWinner);
 
-paperHumanChoice.addEventListener('click',()=>{
-    console.log(paperHumanChoice.textContent);
-});
+paperHumanChoice.addEventListener('click', ()=>getWinner);
     //Create a function getComputerChoice
     function getComputerChoice(){
 
@@ -112,9 +115,26 @@ paperHumanChoice.addEventListener('click',()=>{
 let humanScore = 0;
 let computerScore = 0;
 
+
+function getWinner(){
+    let humanLoser;
+
+    const humanScissorWinner = 
+    computerChoice == paperHumanChoice.textContent ? scissorsHumanChoice.textContent : 
+    computerChoice == rockHumanChoice.textContent ?
+    false : `It's a tie!`;
+
+    const humanPaperWinner = 
+    computerChoice == rockHumanChoice.textContent ? paperHumanChoice.textContent : computerChoice;
+
+    console.log(humanScissorWinner);
+    console.log(computerChoice);
+}
 //create a function playRound()
 //define two parameters for playRound() : humanChoice, computerChoice
 function playRound(humanChoice, computerChoice){
+
+    alert(`${humanChoice} ${computerChoice}`);
     //create string variable getHumanChoice for playRound()
     //set getHumanChoice = humanChoice
     const getHumanChoice = humanChoice.toLowerCase();
