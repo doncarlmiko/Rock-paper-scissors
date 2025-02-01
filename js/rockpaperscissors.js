@@ -2,16 +2,29 @@ const rockHumanChoice = document.querySelector('#Rock');
 const scissorsHumanChoice = document.querySelector('#Scissors');
 const paperHumanChoice = document.querySelector('#Paper');
 
+//Create an integer variable humanScore and put 0
+//create an integer variable computerScore and put 0
+let humanScore = 0;
+let computerScore = 0;
+
+//Count the number of times the button was clicked.
+let countRockClick = 0;
+let countScissorClick = 0;
+let countPaperClick = 0;
+
+
 //Button event handlers for getting the winner
 
 //Getting the winner for Rock
 rockHumanChoice.addEventListener('click', ()=>{
+    countRockClick++;
+
     const computerWinner = getComputerChoice();
-    const humanChoice = rockHumanChoice.textContent;
+    const humanChoice = rockHumanChoice.id;
 
     const humanRockWinner = 
-    computerWinner == scissorsHumanChoice.textContent ? rockHumanChoice.textContent : 
-    computerWinner == paperHumanChoice.textContent ? 
+    computerWinner == scissorsHumanChoice.id ? rockHumanChoice.id : 
+    computerWinner == paperHumanChoice.id ? 
     false : `It's a tie!`;
 
     playRound(humanRockWinner,computerWinner, humanChoice);
@@ -19,6 +32,8 @@ rockHumanChoice.addEventListener('click', ()=>{
 
 //Getting the winner for Scissors
 scissorsHumanChoice.addEventListener('click',()=>{
+    countScissorClick++;
+
     const computerWinner = getComputerChoice();
     const humanChoice = scissorsHumanChoice.textContent;
 
@@ -32,6 +47,8 @@ scissorsHumanChoice.addEventListener('click',()=>{
 
 //Getting the winner for Paper
 paperHumanChoice.addEventListener('click', ()=>{
+    countPaperClick++;
+
     const computerWinner = getComputerChoice();
     const humanChoice = paperHumanChoice.textContent;
 
@@ -69,17 +86,78 @@ paperHumanChoice.addEventListener('click', ()=>{
         }
     }
 
-//Create an integer variable humanScore and put 0
-//create an integer variable computerScore and put 0
-let humanScore = 0;
-let computerScore = 0;
 
 //create a function playRound()
-//define two parameters for playRound() : humanChoice, computerChoice
 function playRound(humanWinner, computerWinner, humanChoice){
+    const roundNumber = document.querySelector('#Round');
+    const roundResult = document.querySelector('#result');
 
-    alert(`${humanWinner} ${computerWinner} ${humanChoice}`);
+    const humanPick = document.querySelector('#human');
+    const computerPick= document.querySelector('#computer');
+
+    const humanFinalScore = document.querySelector('#humanScore');
+    const computerFinalScore = document.querySelector('#computerScore');
+
+    const resultWinner = document.querySelector('#Winner');
+
+    let totalButtonCount = countRockClick + countScissorClick + countPaperClick;
     
+    if(totalButtonCount <= 5){
+
+        if(humanWinner === false){
+            roundResult.textContent='You Lose this Round!';
+            humanPick.textContent=humanChoice;
+            computerPick.textContent=computerWinner;
+
+            computerScore++;
+            
+            humanFinalScore.textContent=humanScore;
+            computerFinalScore.textContent=computerScore;
+            
+            roundNumber.textContent=` ${totalButtonCount}`;
+        }
+        else if(computerWinner === humanChoice){
+            roundResult.textContent= humanWinner;
+            humanPick.textContent=humanChoice;
+            computerPick.textContent=computerWinner;
+
+            humanFinalScore.textContent=humanScore;
+            computerFinalScore.textContent=computerScore;
+
+            roundNumber.textContent=` ${totalButtonCount}`;
+        }
+    
+        else if (humanWinner === humanChoice){
+            roundResult.textContent='You Win this Round!';
+            humanPick.textContent=humanChoice;
+            computerPick.textContent=computerWinner;
+
+            humanScore++;
+
+            humanFinalScore.textContent=humanScore;
+            computerFinalScore.textContent=computerScore;
+
+            roundNumber.textContent=` ${totalButtonCount}`;
+        }
+        
+    }
+
+    if(roundNumber.textContent === ' 5'){
+        rockHumanChoice.disabled = true;
+        scissorsHumanChoice.disabled = true;
+        paperHumanChoice.disabled = true;
+    }
+    
+    if(humanScore > computerScore){
+        resultWinner.textContent='Congratulations! You win the game!';
+    }
+    else if(humanScore < computerScore){
+        resultWinner.textContent = 'You lose! Better luck next time.';
+    }
+    else if(humanScore === computerScore){
+        resultWinner.textContent = `It's a tie game!`;
+    }
+     
 }
 
 //call playRound(humanSelection, computerSelection)
