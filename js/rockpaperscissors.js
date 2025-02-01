@@ -69,64 +69,6 @@ paperHumanChoice.addEventListener('click', ()=>{
         }
     }
 
-    //Create a function getHumanChoice()
-    /*function getHumanChoice(){
-
-        //let whileTrue = true;
-
-        while(whileTrue = true){
-
-            //create a variable string userInput for function getHumanChoice()
-            //put prompt("Pick one - Rock, Paper, Scissors: ", "") to userInput
-            const userInput = prompt("Pick one - Rock, Paper, Scissors: ");
-
-            //create a variable string Rock for function getHumanChoice()
-            //put "Rock" in Rock
-            const Rock = 'Rock';
-
-            //create a variable string Paper for function getHumanChoice()
-            //put "Paper" in Paper
-            const Paper = 'Paper';
-
-            //create a variable string Scissors for function getHumanChoice()
-            //put "Scissors" in Scissors
-            const Scissors = 'Scissors';
-            
-            //Create a boolean variable whileTrue and put true
-
-            //If userInput is equal to null set whileTrue = false and return alert('Cancelled!')
-            if(userInput === null){
-                alert('Cancelled!');
-                return null;
-            }
-
-            //if userInput is equal to Rock, set whileTrue = false and return Rock
-             if (userInput.toLowerCase() === Rock.toLowerCase()){
-                whileTrue = false;
-                return Rock;
-            }
-
-            //If userInput is equal to Paper, set whileTrue = false and return Paper
-            else if(userInput.toLowerCase() === Paper.toLowerCase()){
-                whileTrue = false;
-                return Paper;
-            }
-
-            // If userInput is equal to Scissors, set whileTrue = false and return Scissors
-            else if(userInput.toLowerCase() === Scissors.toLowerCase()){
-                whileTrue = false;
-                return Scissors;
-            }
-
-            //If whileTrue is equal to true, alert('Please choose Rock, Paper or Scissors only!')
-            else if (whileTrue = true){
-                 alert('Please choose, Rock, Paper or Scissors!');
-            }
-        }
-
-
-    }*/
-
 //Create an integer variable humanScore and put 0
 //create an integer variable computerScore and put 0
 let humanScore = 0;
