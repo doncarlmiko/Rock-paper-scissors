@@ -1,4 +1,18 @@
+const rockHumanChoice = document.querySelector('#Rock');
+const scissorsHumanChoice = document.querySelector('#Scissors');
+const paperHumanChoice = document.querySelector('#Paper');
 
+rockHumanChoice.addEventListener('click',()=>{
+    console.log(rockHumanChoice.textContent);
+});
+
+scissorsHumanChoice.addEventListener('click',()=>{
+    console.log(scissorsHumanChoice.textContent);
+});
+
+paperHumanChoice.addEventListener('click',()=>{
+    console.log(paperHumanChoice.textContent);
+});
     //Create a function getComputerChoice
     function getComputerChoice(){
 
@@ -36,9 +50,9 @@
     }
 
     //Create a function getHumanChoice()
-    function getHumanChoice(){
+    /*function getHumanChoice(){
 
-        let whileTrue = true;
+        //let whileTrue = true;
 
         while(whileTrue = true){
 
@@ -89,8 +103,9 @@
                  alert('Please choose, Rock, Paper or Scissors!');
             }
         }
-    }
 
+
+    }*/
 
 //Create an integer variable humanScore and put 0
 //create an integer variable computerScore and put 0
@@ -208,7 +223,7 @@ function playRound(humanChoice, computerChoice){
 
 function playGame(){
     let loopRound;
-    for(loopRound = 1; loopRound <= 5; loopRound++){
+    /*for(loopRound = 1; loopRound <= 5; loopRound++){
         // Get new choices for each round
 
         //create a variable humanSelection
@@ -231,7 +246,7 @@ function playGame(){
 
         // Play a round and update scores
         playRound(humanSelection, computerSelection);
-    }
+    }*/
 
     console.log(`\nFinal Score: Human: ${humanScore}, Computer: ${computerScore}`);
     if (humanScore > computerScore) {
@@ -243,5 +258,5 @@ function playGame(){
     }
 }
 
-playGame();
+//playGame();
 
