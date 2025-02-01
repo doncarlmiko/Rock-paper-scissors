@@ -148,13 +148,13 @@ function playRound(humanWinner, computerWinner, humanChoice){
         paperHumanChoice.disabled = true;
     }
     
-    if(humanScore > computerScore){
+    if(roundNumber.textContent === ' 5' && humanScore > computerScore){
         resultWinner.textContent='Congratulations! You win the game!';
     }
-    else if(humanScore < computerScore){
+    else if(roundNumber.textContent === ' 5' && humanScore < computerScore){
         resultWinner.textContent = 'You lose! Better luck next time.';
     }
-    else if(humanScore === computerScore){
+    else if(roundNumber.textContent === ' 5' && humanScore === computerScore){
         resultWinner.textContent = `It's a tie game!`;
     }
      
