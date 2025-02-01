@@ -20,11 +20,11 @@ rockHumanChoice.addEventListener('click', ()=>{
 //Getting the winner for Scissors
 scissorsHumanChoice.addEventListener('click',()=>{
     const computerWinner = getComputerChoice();
-    const humanChoice = paperHumanChoice.textContent;
+    const humanChoice = scissorsHumanChoice.textContent;
 
     const humanPaperWinner = 
-    computerWinner == rockHumanChoice.textContent ? paperHumanChoice.textContent : 
-    computerWinner == scissorsHumanChoice.textContent ? false : 
+    computerWinner == paperHumanChoice.textContent ? scissorsHumanChoice.textContent : 
+    computerWinner == rockHumanChoice.textContent ? false : 
     `It's a tie!`;
 
     playRound(humanPaperWinner,computerWinner, humanChoice);
@@ -33,11 +33,11 @@ scissorsHumanChoice.addEventListener('click',()=>{
 //Getting the winner for Paper
 paperHumanChoice.addEventListener('click', ()=>{
     const computerWinner = getComputerChoice();
-    const humanChoice = scissorsHumanChoice.textContent;
+    const humanChoice = paperHumanChoice.textContent;
 
     const humanScissorWinner = 
-    computerWinner == paperHumanChoice.textContent ? scissorsHumanChoice.textContent : 
-    computerWinner == rockHumanChoice.textContent ? false : 
+    computerWinner == rockHumanChoice.textContent ? paperHumanChoice.textContent : 
+    computerWinner == scissorsHumanChoice.textContent ? false : 
     `It's a tie!`;
 
     playRound(humanScissorWinner,computerWinner, humanChoice);
