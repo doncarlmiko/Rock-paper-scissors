@@ -2,12 +2,11 @@ const rockHumanChoice = document.querySelector('#Rock');
 const scissorsHumanChoice = document.querySelector('#Scissors');
 const paperHumanChoice = document.querySelector('#Paper');
 
-//Create an integer variable humanScore and put 0
-//create an integer variable computerScore and put 0
+//Counts the total score of each players
 let humanScore = 0;
 let computerScore = 0;
 
-//Count the number of times the button was clicked.
+//Count the number of times each button was clicked.
 let countRockClick = 0;
 let countScissorClick = 0;
 let countPaperClick = 0;
@@ -92,6 +91,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
     const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
 
+    //The selected option of the human player and the computer
     const humanPick = document.querySelector('#human');
     const computerPick= document.querySelector('#computer');
 
@@ -100,8 +100,10 @@ function playRound(humanWinner, computerWinner, humanChoice){
 
     const resultWinner = document.querySelector('#Winner');
 
+    //Add the total number of clicks of all the buttons: Rock, paper, scissors.
     let totalButtonCount = countRockClick + countScissorClick + countPaperClick;
     
+    //play five rounds of the game
     if(totalButtonCount <= 5){
 
         if(humanWinner === false){
@@ -142,12 +144,14 @@ function playRound(humanWinner, computerWinner, humanChoice){
         
     }
 
+    //disable the three buttons when it is already five rounds
     if(roundNumber.textContent === ' 5'){
         rockHumanChoice.disabled = true;
         scissorsHumanChoice.disabled = true;
         paperHumanChoice.disabled = true;
     }
     
+    //Display the result of the Winner
     if(roundNumber.textContent === ' 5' && humanScore > computerScore){
         resultWinner.textContent='Congratulations! You win the game!';
     }
