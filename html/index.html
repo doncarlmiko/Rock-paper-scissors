@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="../js/rockpaperscissors.js" defer></script>
+
+    <!--css fonts-->
     <link href="../css/main-page-mobile.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+
     <title>Rock paper scissors game!</title>
 </head>
 <body>
     <header>
-        <h1>Defeat the Aliens!</h1>
-        <h2>Won five rounds to save planet earth!</h2>
+        <h1 class="main-header protest-strike-regular">DEFEAT THE ALIENS!</h1>
+        <h2 class="subheading-1 protest-strike-regular">Won five rounds to save Planet earth!</h2>
     </header>
-
-    <div>
-        <h1>Human: 1</h1>
-        <h1>Aliens: 1</h1>
-    </div>
-
+      
+        <!--Scores of each player-->
+            <h1 class="protest-strike-regular humanScore">Human:<br> 1</h1>
+            <h1 class="protest-strike-regular humanScore">Aliens: <br>1</h1>
     <div class="container">
         <section>
             <div>
@@ -27,7 +31,7 @@
             <div>
                 <figure>
                     <img alt="This is a photo2">
-                    <figcaption>Laerbeam</figcaption>
+                    <figcaption>Laserbeam</figcaption>
                 </figure>  
             </div>
         </section>
@@ -46,6 +50,7 @@
         </section>
 
         <section>
+            <h1>Choose your weapon</h1>
             <button>Meteor</button>
             <button>Laser Beam</button>
             <button>Force Field</button>
