@@ -10,7 +10,7 @@ body{
 :root{
 	--header-main:2.7rem;
 	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
-	--subheading1-font-size: clamp(1.25rem, 5vw + 1rem, 1.875rem);
+	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
   }
 
@@ -20,8 +20,7 @@ body{
 	font-style: normal;
   }
 
-.main-header{	
-	/*background-color: lightgray;*/
+.main-header{
     font-size: var(--main-heading-font-size);
 	text-align: center;
 }
@@ -31,11 +30,21 @@ body{
 	text-align: center;
 }
 
-.humanScore{
-	display: inline-block;
-	font-size: var(--score-font-size);
+.humanScoreContainer{
+	display: inline-flex;
 	margin: 0;
+	padding:0;
+	/*padding-inline: clamp(10vw, 5vw + 1rem, 10rem);*/
+}
+
+.humanScore{
+	font-size: var(--score-font-size);
+	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
+	margin-top: 0;
+
+}
+
+.score{
 	text-align: center;
-	padding-inline: min(10vw, 5rem);
-	
+	padding-inline-start: clamp(1vw, 2.5vw + 1rem, 5rem);
 }
