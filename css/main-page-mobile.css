@@ -51,10 +51,21 @@ body{
 }
 
 .twocolumn {
-	flex: 10;
-	flex-basis: 25%; 
-	box-sizing: border-box;
+	display:flex;
+	flex-wrap: wrap;
+	gap:2rem;
   }
+
+  .twocolumn > div {
+    flex: 1; /* Make both divs take equal space */
+    min-width: 5%; /* Ensure each takes up half the width */
+    box-sizing: border-box;
+}
+
+.flex-item-picture{
+	display: flex;
+}
+
 
 figure{
 	margin:0;
@@ -92,3 +103,4 @@ figcaption{
 	height: min(60vw,13rem);
 	padding-block-start: 2rem;
 }
+
