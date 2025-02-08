@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+}
+:root{
+	--header-main:2.7rem;
+	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
+	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
+	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
+	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
+  }
+
+.protest-strike-regular {
+	font-family: "Protest Strike", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+.main-header{
+    font-size: var(--main-heading-font-size);
+	text-align: center;
+}
+
+.subheading-1{
+	font-size: var(--subheading1-font-size);
+	text-align: center;
+}
+
+.humanScoreContainer{
+	display: inline-flex;
+	margin: 0;
+	padding:0;
+	/*padding-inline: clamp(10vw, 5vw + 1rem, 10rem);*/
+}
+
+.humanScore{
+	font-size: var(--score-font-size);
+	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
+	margin-top: 0;
+
+}
+
+.score{
+	text-align: center;
+	padding-inline-start: clamp(1vw, 2.5vw + 1rem, 5rem);
+}
+
+.twocolumn {
+	display:flex;
+	flex-wrap: wrap;
+  }
+
+  .twocolumn > div {
+    flex: 1; /* Make both divs take equal space */
+    /*min-width:5%; /* Ensure each takes up half the width */
+    box-sizing: border-box;
+}
+
+figure{
+	margin:0;
+	width: min(20vh,10rem);
+	height: min(20vh,10rem);
+}
+
+figcaption{
+	font-size: var(--weapon-font-size);
+	width: min(100vw,20rem);
+	height: min(20vw,5rem);
+}
+
+.Astronaut{
+	max-width:100%;
+	max-height:100%;
+	width: min(100vw,10rem);
+	height: min(60vh,30rem);
+}
+
+.humanWeapon{
+	max-width:100%;
+	max-height:100%;
+	width: min(100vw,10.8125rem);
+	height: min(60vh,9.875rem);
+}
+
+.Alien{
+	max-width:100%;
+	max-height:100%;
+	width: min(100vw,9rem);
+	height: min(100vh,10rem);
+}
+
+.alienWeapon{
+	max-width:100%;
+	max-height:100%;
+	width: min(100vw,10.8125rem);
+	height: min(60vw,13rem);
+}
+

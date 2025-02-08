@@ -16,6 +16,7 @@ let countPaperClick = 0;
 
 //Getting the winner for Rock
 rockHumanChoice.addEventListener('click', ()=>{
+
     countRockClick++;
 
     const computerWinner = getComputerChoice();
@@ -31,6 +32,7 @@ rockHumanChoice.addEventListener('click', ()=>{
 
 //Getting the winner for Scissors
 scissorsHumanChoice.addEventListener('click',()=>{
+
     countScissorClick++;
 
     const computerWinner = getComputerChoice();
@@ -46,6 +48,7 @@ scissorsHumanChoice.addEventListener('click',()=>{
 
 //Getting the winner for Paper
 paperHumanChoice.addEventListener('click', ()=>{
+
     countPaperClick++;
 
     const computerWinner = getComputerChoice();
@@ -103,9 +106,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
     //Add the total number of clicks of all the buttons: Rock, paper, scissors.
     let totalButtonCount = countRockClick + countScissorClick + countPaperClick;
     
-    //play five rounds of the game
-    if(totalButtonCount <= 5){
-
+    //play each round of the game
         if(humanWinner === false){
             roundResult.textContent='You Lose this Round!';
             humanPick.textContent=humanChoice;
@@ -117,6 +118,8 @@ function playRound(humanWinner, computerWinner, humanChoice){
             computerFinalScore.textContent=computerScore;
             
             roundNumber.textContent=` ${totalButtonCount}`;
+
+            getFinalWinner(humanScore,computerScore,resultWinner);
         }
         else if(computerWinner === humanChoice){
             roundResult.textContent= humanWinner;
@@ -127,6 +130,8 @@ function playRound(humanWinner, computerWinner, humanChoice){
             computerFinalScore.textContent=computerScore;
 
             roundNumber.textContent=` ${totalButtonCount}`;
+
+            getFinalWinner(humanScore,computerScore,resultWinner);
         }
     
         else if (humanWinner === humanChoice){
@@ -140,25 +145,29 @@ function playRound(humanWinner, computerWinner, humanChoice){
             computerFinalScore.textContent=computerScore;
 
             roundNumber.textContent=` ${totalButtonCount}`;
+
+            getFinalWinner(humanScore,computerScore,resultWinner);
         }
-        
-    }
 
     //disable the three buttons when it is already five rounds
-    if(roundNumber.textContent === ' 5'){
+    if(humanScore ===5 || computerScore ===5){
         rockHumanChoice.disabled = true;
         scissorsHumanChoice.disabled = true;
         paperHumanChoice.disabled = true;
     }
-    
+}
+
+//get the Final winner
+function getFinalWinner(humanScore,computerScore,resultWinner){
+
     //Display the result of the Winner
-    if(roundNumber.textContent === ' 5' && humanScore > computerScore){
+    if((humanScore === 5 || computerScore === 5) && humanScore > computerScore){
         resultWinner.textContent='Congratulations! You win the game!';
     }
-    else if(roundNumber.textContent === ' 5' && humanScore < computerScore){
+    else if((humanScore === 5 || computerScore === 5) && humanScore < computerScore){
         resultWinner.textContent = 'You lose! Better luck next time.';
     }
-    else if(roundNumber.textContent === ' 5' && humanScore === computerScore){
+    else if((humanScore === 5 || computerScore === 5) && humanScore === computerScore){
         resultWinner.textContent = `It's a tie game!`;
     }
      
