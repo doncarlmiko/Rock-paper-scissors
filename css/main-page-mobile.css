@@ -12,7 +12,7 @@ body{
 	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
 	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
-	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 2.5rem);
+	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
   }
 
 .protest-strike-regular {
@@ -53,19 +53,16 @@ body{
 .twocolumn {
 	display:flex;
 	flex-wrap: wrap;
-	gap:2rem;
   }
 
-  .twocolumn > div {
+  /*.twocolumn > div {
     flex: 1; /* Make both divs take equal space */
-    min-width: 5%; /* Ensure each takes up half the width */
-    box-sizing: border-box;
+    /*min-width: 5%; /* Ensure each takes up half the width */
+   /* box-sizing: border-box;
+}*/
+.flex-child{
+	flex-basis: 50%;
 }
-
-.flex-item-picture{
-	display: flex;
-}
-
 
 figure{
 	margin:0;
@@ -73,14 +70,15 @@ figure{
 
 figcaption{
 	font-size: var(--weapon-font-size);
+	text-align: left;
 }
 
 .Astronaut{
 	max-width:100%;
 	max-height:100%;
 	width: min(100vw,10rem);
-	height: min(60vw,13rem);
-}
+	height: min(60vw,14rem);
+}	
 
 .humanWeapon{
 	max-width:100%;
@@ -96,11 +94,35 @@ figcaption{
 	height: min(60vw,10rem);
 }
 
+.alien-flex-child{
+	padding-block-start: min(5vh,3rem);
+	padding-inline-start:min(2vh,2rem);
+}
+
 .alienWeapon{
 	max-width:100%;
 	max-height:100%;
 	width: min(100vw,10.8125rem);
-	height: min(60vw,13rem);
-	padding-block-start: 2rem;
+	height: min(60vw,9.875rem);
 }
 
+.footer-flex-container{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap:0;
+	align-items: center;
+  	justify-content: center;
+}
+
+.button-flex-item{
+	width: 8.8125rem;
+	height: 2.5rem;
+}
+
+
+
+
+.item-1 { order: 2; }
+
+.item-2 { order: 1; }
