@@ -19,6 +19,8 @@ body{
 	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
 	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
+	--choose-weapon-font-size:clamp(0.8rem, 5vw + 1rem, 2.5rem);
+
 	--button-color: #99511A;
   }
 
@@ -133,8 +135,9 @@ figcaption{
 	background-color: rgba(87, 10, 10, 0.44); 
 }
 
-footer > h1{
+.footer-flex-container > h1{
 	text-align: center;
+	font-size: var(--choose-weapon-font-size);
 }
 
 button{
@@ -151,10 +154,13 @@ button:hover{
 	background-color: #9164D1;
 }
 
-
-
-
-
 .item-1 { order: 2; }
 
 .item-2 { order: 1; }
+
+
+@media(min-width:425px){
+	.twocolumn {
+		padding-inline-start: min(10vw, 20rem);
+	  }
+}
