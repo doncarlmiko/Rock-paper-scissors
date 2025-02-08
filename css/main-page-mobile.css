@@ -2,10 +2,16 @@
 *::before,
 *::after{
 	box-sizing: border-box;
+	
 }
 
 body{
 	margin: 0;
+	background-image: url("../img/image for desktop and mobile/Universe back ground.jpg");
+    background-size: cover;
+	background-position: center;
+	color: #FFFFFF;
+	
 }
 :root{
 	--header-main:2.7rem;
@@ -13,14 +19,23 @@ body{
 	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
 	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
+	--button-color: #99511A;
   }
 
+  /*-----------------Font styles -----------------------*/
 .protest-strike-regular {
 	font-family: "Protest Strike", serif;
 	font-weight: 400;
 	font-style: normal;
   }
 
+.audiowide-regular {
+	font-family: "Audiowide", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+/*-- header ---*/
 .main-header{
     font-size: var(--main-heading-font-size);
 	text-align: center;
@@ -31,11 +46,11 @@ body{
 	text-align: center;
 }
 
+/*--- Scores of each player --*/
 .humanScoreContainer{
 	display: inline-flex;
 	margin: 0;
 	padding:0;
-	/*padding-inline: clamp(10vw, 5vw + 1rem, 10rem);*/
 }
 
 .humanScore{
@@ -50,54 +65,96 @@ body{
 	padding-inline-start: clamp(1vw, 2.5vw + 1rem, 5rem);
 }
 
+/* --- Play round of the game ---*/
 .twocolumn {
 	display:flex;
 	flex-wrap: wrap;
   }
 
-  .twocolumn > div {
-    flex: 1; /* Make both divs take equal space */
-    /*min-width:5%; /* Ensure each takes up half the width */
-    box-sizing: border-box;
+.flex-child{
+	flex-basis: 50%;
 }
 
 figure{
 	margin:0;
-	width: min(20vh,10rem);
-	height: min(20vh,10rem);
 }
 
 figcaption{
 	font-size: var(--weapon-font-size);
-	width: min(100vw,20rem);
-	height: min(20vw,5rem);
+	text-align: left;
 }
 
+/* -- Astronaut and Alien images -- */
 .Astronaut{
 	max-width:100%;
 	max-height:100%;
 	width: min(100vw,10rem);
-	height: min(60vh,30rem);
-}
-
-.humanWeapon{
-	max-width:100%;
-	max-height:100%;
-	width: min(100vw,10.8125rem);
-	height: min(60vh,9.875rem);
-}
+	height: min(60vw,14rem);
+}	
 
 .Alien{
 	max-width:100%;
 	max-height:100%;
 	width: min(100vw,9rem);
-	height: min(100vh,10rem);
+	height: min(60vw,10rem);
+}
+
+.alien-flex-child{
+	padding-block-start: min(5vh,3rem);
+	padding-inline-start:min(2vh,2rem);
+}
+
+/*-- Selected weapons of each player --*/
+.humanWeapon{
+	max-width:100%;
+	max-height:100%;
 }
 
 .alienWeapon{
 	max-width:100%;
 	max-height:100%;
-	width: min(100vw,10.8125rem);
-	height: min(60vw,13rem);
 }
 
+.alienWeapon,.humanWeapon{
+	width: min(100vw,10.8125rem);
+	height: min(60vw,20rem);
+	
+}
+
+/*-- Human weapon button choices --*/
+
+.footer-flex-container{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap:0;
+	align-items: center;
+  	justify-content: center;
+	background-color: rgba(87, 10, 10, 0.44); 
+}
+
+footer > h1{
+	text-align: center;
+}
+
+button{
+	width: 50%;
+	height: min(60vw,4rem);
+	font-size: var(--weapon-font-size);
+	margin: min(60vw, 1rem);
+	border: none;
+	z-index: 10;
+	background-color: var(--button-color);
+	color: #FFFFFF;
+}
+button:hover{
+	background-color: #9164D1;
+}
+
+
+
+
+
+.item-1 { order: 2; }
+
+.item-2 { order: 1; }

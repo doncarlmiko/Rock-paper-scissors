@@ -12,7 +12,7 @@
     <!--css fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Protest+Strike&display=swap" rel="stylesheet">
 
     <title>Rock paper scissors game!</title>
 </head>
@@ -31,36 +31,40 @@
         
         <div class="column">
             <div class="twocolumn">
-                <div>
-                    <figure><img class ="Astronaut" src="../img/image for desktop and mobile/Astronaut.png" alt="This is an Astronaut">
+                    <!--Human image-->
+                    <figure class="flex-child"><img class ="Astronaut" src="../img/image for desktop and mobile/Astronaut.png" alt="This is an Astronaut">
                     </figure>
-                    <figure>
+
+                     <!--Alien image-->
+                    <figure class="flex-child alien-flex-child"><img class ="Alien" src="../img/image for desktop and mobile/ufo.png" alt="This is a photo1">  
+                    </figure>  
+
+                     <!--Human Weapon-->
+                    <figure class="flex-child">
                         <img class="humanWeapon" src="../img/Weapons/Laser beam.png" alt="This is a photo2">
                         <figcaption class="protest-strike-regular">Laser Beam</figcaption>
                     </figure> 
-                </div>
-        
-                <div>
-                    <figure><img class ="Alien" src="../img/image for desktop and mobile/ufo.png" alt="This is a photo1">  
-                    </figure>          
-        
-                    <figure>
+                    
+                    <!--Alien weapon-->
+                    <figure class="flex-child alien-weapon-flex-child">
                         <img class="alienWeapon" src="../img/Weapons/Meteor.png" alt="This is a photo2">
                         <figcaption class="protest-strike-regular">Meteor</figcaption>
                     </figure>  
-                </div>
             </div>
-        </div>
+        </div> 
         
-        
+        <div class="column footer-container">
+            <footer>
+                <div class="footer-flex-container">
+                <h1 class="audiowide-regular">Choose your Weapon</h1>
                 
-
-        <section class="column">
-            <h1>Choose your weapon</h1>
-            <button>Meteor</button>
-            <button>Laser Beam</button>
-            <button>Force Field</button>
-        </section>
+                    <button class="protest-strike-regular" id="Rock">Meteor</button>
+                    <button class="protest-strike-regular">Force Field</button>
+                    <button class="protest-strike-regular">Laser Beam</button>
+                </div>
+            </footer>
+        </div>
+            
     </div>
 
     <!--<h1>Rock, Paper, Scissors</h1>
