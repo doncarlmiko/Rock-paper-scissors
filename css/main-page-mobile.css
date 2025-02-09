@@ -53,8 +53,6 @@ body{
 .humanScoreContainer{
 	display: flex;
 	flex-wrap: nowrap;
-	flex-shrink: 1;
-	flex-basis: 5%;
 }
 
 .humanScore{
@@ -62,8 +60,8 @@ body{
 	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
 	margin-top: 0;
 	text-align: center;
-	flex-basis: 1000px;
-	margin:auto;
+	flex-basis: 100%;
+	flex-grow: 1;
 }
 
 .score{
@@ -167,7 +165,7 @@ button:hover{
 	background-color: #9164D1;
 }
 
-
+/*-- media queries --*/
 @media(min-width:579px){
 	.flex-child {
 		flex-basis:auto;
@@ -191,30 +189,12 @@ button:hover{
 }
 
 @media(min-width:681px){
-	  .Astronaut{
-		max-width:100%;
-		max-height:100%;
-		width: min(100vw,10rem);
-		height: min(60vw,14rem);
-	}	
 	
-	.Alien{
-		max-width:100%;
-		max-height:100%;
-		width: min(100vw,9rem);
-		height: min(60vw,10rem);
-	}
-	.alienWeapon,.humanWeapon{
-		width: min(100vw,10.8125rem);
-		height: min(60vw,20rem);
-		
-	}
+	.flex-child {
+		flex-basis:35%;
+	  }
 
-	.alien-flex-child{
-		padding:0;
-	}
-
-	.item-2{order:4;}
+	/*.item-2{order:4;}
 	.item-3{order:2;}
-	.item-4{order:3;}
+	.item-4{order:3;}*/
 }
