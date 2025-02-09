@@ -18,8 +18,9 @@ body{
 	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
 	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
-	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
-	--choose-weapon-font-size:clamp(0.8rem, 5vw + 1rem, 2.5rem);
+	--weapon-font-size: clamp(1.25rem, 2vw + 1rem, 1.8rem);
+	--weapon-human-font-size: clamp(0.8rem, 5vw + 1rem, 1.25rem);
+	--choose-weapon-font-size:clamp(1.25rem, 2vw + 1rem, 2.5rem);
 
 	--button-color: #99511A;
   }
@@ -71,10 +72,15 @@ body{
 .twocolumn {
 	display:flex;
 	flex-wrap: wrap;
+	align-items: center;
+  	justify-content: center;
+	margin-left: auto;
   }
 
 .flex-child{
-	flex-basis: 50%;
+	flex-basis: 40%;
+	margin:auto;
+	flex-shrink: 1;
 }
 
 figure{
@@ -125,25 +131,29 @@ figcaption{
 
 /*-- Human weapon button choices --*/
 
-.footer-flex-container{
-	display:flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	gap:0;
-	align-items: center;
-  	justify-content: center;
+.footer-flex{
 	background-color: rgba(87, 10, 10, 0.44); 
+	padding-top: 0.4rem;
 }
 
-.footer-flex-container > h1{
+.footer-flex > h1{
 	text-align: center;
 	font-size: var(--choose-weapon-font-size);
 }
 
+.footer-flex-container{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap:0;
+	align-items: center;
+  	justify-content: center;
+}
+
 button{
-	width: 50%;
-	height: min(60vw,4rem);
-	font-size: var(--weapon-font-size);
+	width: min(100vw,7.3125rem);
+	height: min(60vw,2.5rem);
+	font-size: var(--weapon-human-font-size);
 	margin: min(60vw, 1rem);
 	border: none;
 	z-index: 10;
@@ -154,13 +164,21 @@ button:hover{
 	background-color: #9164D1;
 }
 
-.item-1 { order: 2; }
 
-.item-2 { order: 1; }
-
-
-@media(min-width:425px){
-	.twocolumn {
-		padding-inline-start: min(10vw, 20rem);
+@media(min-width:579px){
+	.flex-child {
+		flex-basis:auto;
+		
 	  }
+
+	  .Astronaut{
+		width: min(100vw,15rem);
+		height: min(60vw,20rem);
+	  }
+
+	  .Alien{
+		width: min(100vw,14rem);
+		height: min(60vw,15rem);
+	  }
+
 }
