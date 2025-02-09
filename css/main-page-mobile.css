@@ -8,8 +8,8 @@
 body{
 	margin: 0;
 	background-image: url("../img/image for desktop and mobile/Universe back ground.jpg");
-    background-size: cover;
-	background-position: center;
+    background-size:auto;
+	background-position:center;
 	color: #FFFFFF;
 	
 }
@@ -18,7 +18,10 @@ body{
 	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
 	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
 	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
-	--weapon-font-size: clamp(1.25rem, 5vw + 1rem, 1.8rem);
+	--weapon-font-size: clamp(1.25rem, 2vw + 1rem, 1.8rem);
+	--weapon-human-font-size: clamp(0.8rem, 5vw + 1rem, 1.25rem);
+	--choose-weapon-font-size:clamp(1.25rem, 2vw + 1rem, 2.5rem);
+
 	--button-color: #99511A;
   }
 
@@ -48,16 +51,19 @@ body{
 
 /*--- Scores of each player --*/
 .humanScoreContainer{
-	display: inline-flex;
-	margin: 0;
-	padding:0;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-shrink: 1;
+	flex-basis: 5%;
 }
 
 .humanScore{
 	font-size: var(--score-font-size);
 	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
 	margin-top: 0;
-
+	text-align: center;
+	flex-basis: 1000px;
+	margin:auto;
 }
 
 .score{
@@ -69,10 +75,15 @@ body{
 .twocolumn {
 	display:flex;
 	flex-wrap: wrap;
+	align-items: center;
+  	justify-content: center;
+	margin-left: auto;
   }
 
 .flex-child{
-	flex-basis: 50%;
+	flex-basis: 40%;
+	margin:auto;
+	flex-shrink: 1;
 }
 
 figure{
@@ -123,24 +134,29 @@ figcaption{
 
 /*-- Human weapon button choices --*/
 
+.footer-flex{
+	background-color: rgba(87, 10, 10, 0.44); 
+	padding-top: 0.4rem;
+}
+
+.footer-flex > h1{
+	text-align: center;
+	font-size: var(--choose-weapon-font-size);
+}
+
 .footer-flex-container{
 	display:flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
 	gap:0;
 	align-items: center;
   	justify-content: center;
-	background-color: rgba(87, 10, 10, 0.44); 
-}
-
-footer > h1{
-	text-align: center;
 }
 
 button{
-	width: 50%;
-	height: min(60vw,4rem);
-	font-size: var(--weapon-font-size);
+	width: min(100vw,7.3125rem);
+	height: min(60vw,2.5rem);
+	font-size: var(--weapon-human-font-size);
 	margin: min(60vw, 1rem);
 	border: none;
 	z-index: 10;
@@ -152,9 +168,53 @@ button:hover{
 }
 
 
+@media(min-width:579px){
+	.flex-child {
+		flex-basis:auto;
+		
+	  }
 
+	  .Astronaut{
+		width: min(100vw,14rem);
+		height: min(60vw,18rem);
+	  }
 
+	  .Alien{
+		width: min(100vw,12.5rem);
+		height: min(60vw,15rem);
+	  }
+	  .alienWeapon,.humanWeapon{
+		width: min(100vw,15rem);
+		height: min(60vw,20rem);
+		
+	}
+}
 
-.item-1 { order: 2; }
+@media(min-width:681px){
+	  .Astronaut{
+		max-width:100%;
+		max-height:100%;
+		width: min(100vw,10rem);
+		height: min(60vw,14rem);
+	}	
+	
+	.Alien{
+		max-width:100%;
+		max-height:100%;
+		width: min(100vw,9rem);
+		height: min(60vw,10rem);
+	}
+	.alienWeapon,.humanWeapon{
+		width: min(100vw,10.8125rem);
+		height: min(60vw,20rem);
+		
+	}
 
-.item-2 { order: 1; }
+	.alien-flex-child{
+		padding:0;
+	}
+
+	.item-2{order:4;}
+	.item-3{order:2;}
+	.item-4{order:3;}
+}
