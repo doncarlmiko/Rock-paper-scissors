@@ -169,11 +169,19 @@ button:hover{
 
 /*-- media queries --*/
 @media(min-width:579px){
-	.flex-child {
-		flex-basis:50%;
-	  }
 	
 	  .twocolumn{
-		width: 75%;
+		margin-left: 12%;
 	  }
 }
+
+@media(min-width:1024px){
+	
+	.twocolumn{
+	  flex-wrap: nowrap;
+	}
+	.item-2{order:4;}
+	.item-3{order:2;}
+	.item-4{order:3;}
+}
+
