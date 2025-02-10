@@ -76,6 +76,7 @@ body{
 	align-items: center;
   	justify-content: center;
 	margin-left: auto;
+	margin-right:auto;
   }
 
 .flex-child{
@@ -135,6 +136,7 @@ figcaption{
 .footer-flex{
 	background-color: rgba(87, 10, 10, 0.44); 
 	padding-top: 0.4rem;
+	padding-bottom: 20px;
 }
 
 .footer-flex > h1{
@@ -168,33 +170,10 @@ button:hover{
 /*-- media queries --*/
 @media(min-width:579px){
 	.flex-child {
-		flex-basis:auto;
-		
+		flex-basis:50%;
 	  }
-
-	  .Astronaut{
-		width: min(100vw,14rem);
-		height: min(60vw,18rem);
-	  }
-
-	  .Alien{
-		width: min(100vw,12.5rem);
-		height: min(60vw,15rem);
-	  }
-	  .alienWeapon,.humanWeapon{
-		width: min(100vw,15rem);
-		height: min(60vw,20rem);
-		
-	}
-}
-
-@media(min-width:681px){
 	
-	.flex-child {
-		flex-basis:35%;
+	  .twocolumn{
+		width: 75%;
 	  }
-
-	/*.item-2{order:4;}
-	.item-3{order:2;}
-	.item-4{order:3;}*/
 }
