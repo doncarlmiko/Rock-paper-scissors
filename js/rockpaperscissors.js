@@ -28,6 +28,7 @@ rockHumanChoice.addEventListener('click', ()=>{
     false : `It's a tie!`;
 
     playRound(humanRockWinner,computerWinner, humanChoice);
+
 });
 
 //Getting the winner for Scissors
@@ -36,11 +37,11 @@ scissorsHumanChoice.addEventListener('click',()=>{
     countScissorClick++;
 
     const computerWinner = getComputerChoice();
-    const humanChoice = scissorsHumanChoice.textContent;
+    const humanChoice = scissorsHumanChoice.id;
 
     const humanPaperWinner = 
-    computerWinner == paperHumanChoice.textContent ? scissorsHumanChoice.textContent : 
-    computerWinner == rockHumanChoice.textContent ? false : 
+    computerWinner == paperHumanChoice.id ? scissorsHumanChoice.id : 
+    computerWinner == rockHumanChoice.id ? false : 
     `It's a tie!`;
 
     playRound(humanPaperWinner,computerWinner, humanChoice);
@@ -52,11 +53,11 @@ paperHumanChoice.addEventListener('click', ()=>{
     countPaperClick++;
 
     const computerWinner = getComputerChoice();
-    const humanChoice = paperHumanChoice.textContent;
+    const humanChoice = paperHumanChoice.id;
 
     const humanScissorWinner = 
-    computerWinner == rockHumanChoice.textContent ? paperHumanChoice.textContent : 
-    computerWinner == scissorsHumanChoice.textContent ? false : 
+    computerWinner == rockHumanChoice.id ? paperHumanChoice.id: 
+    computerWinner == scissorsHumanChoice.id ? false : 
     `It's a tie!`;
 
     playRound(humanScissorWinner,computerWinner, humanChoice);
@@ -101,14 +102,14 @@ function playRound(humanWinner, computerWinner, humanChoice){
     const humanFinalScore = document.querySelector('#humanScore');
     const computerFinalScore = document.querySelector('#computerScore');
 
-    const resultWinner = document.querySelector('#Winner');
+    let resultWinner;
 
     //Add the total number of clicks of all the buttons: Rock, paper, scissors.
     let totalButtonCount = countRockClick + countScissorClick + countPaperClick;
     
     //play each round of the game
         if(humanWinner === false){
-            roundResult.textContent='You Lose this Round!';
+            roundResult.textContent=' You Lose this Round!';
             humanPick.textContent=humanChoice;
             computerPick.textContent=computerWinner;
 
@@ -135,7 +136,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
         }
     
         else if (humanWinner === humanChoice){
-            roundResult.textContent='You Win this Round!';
+            roundResult.textContent=' You Win this Round!';
             humanPick.textContent=humanChoice;
             computerPick.textContent=computerWinner;
 
@@ -162,13 +163,13 @@ function getFinalWinner(humanScore,computerScore,resultWinner){
 
     //Display the result of the Winner
     if((humanScore === 5 || computerScore === 5) && humanScore > computerScore){
-        resultWinner.textContent='Congratulations! You win the game!';
+        resultWinner=alert('Congratulations! You win the game!');
     }
     else if((humanScore === 5 || computerScore === 5) && humanScore < computerScore){
-        resultWinner.textContent = 'You lose! Better luck next time.';
+        resultWinner= alert('You lose! Better luck next time.');
     }
     else if((humanScore === 5 || computerScore === 5) && humanScore === computerScore){
-        resultWinner.textContent = `It's a tie game!`;
+        resultWinner= alert(`It's a tie game!`);
     }
      
 }
