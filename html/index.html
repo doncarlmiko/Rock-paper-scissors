@@ -20,14 +20,14 @@
     <div class="container">
         <header class="column">
             <h1 class="main-header protest-strike-regular">DEFEAT THE ALIENS!</h1>
-            <h2 class="subheading-1 protest-strike-regular">Won five rounds to save Planet earth!</h2>
+            <h2  id="result" class="subheading-1 protest-strike-regular">Won five rounds to save Planet earth!<span></span></h2>
         </header>
 
         <!--Scores of each player-->
         <div class="column"> 
             <div class="humanScoreContainer">
-                <h1 class="protest-strike-regular humanScore">Human: <span class="score">1</span></h1>
-                <h1 class="protest-strike-regular humanScore">Aliens: <span class="score">1</span></h1>
+                <h1 class="protest-strike-regular humanScore">Human: <span id ="humanScore" class="score">0</span></h1>
+                <h1 class="protest-strike-regular humanScore">Aliens: <span id ="computerScore" class="score">0</span></h1>
             </div>
         </div>
         
@@ -43,26 +43,26 @@
 
                      <!--Human Weapon-->
                     <figure class="flex-child item-3">
-                        <img class="humanWeapon" src="../img/Weapons/Laser beam.png" alt="This is a photo2">
-                        <figcaption class="protest-strike-regular">Laser Beam</figcaption>
+                        <img id="humanWeapon" class="humanWeapon" src="../img/Weapons/Laser beam.png" alt="This is a photo2">
+                        <figcaption  id="human" class="fig1 protest-strike-regular">Laser Beam</figcaption>
                     </figure> 
                     
                     <!--Alien weapon-->
                     <figure class="flex-child alien-weapon-flex-child item-4">
-                        <img class="alienWeapon" src="../img/Weapons/Meteor.png" alt="This is a photo2">
-                        <figcaption class="protest-strike-regular">Meteor</figcaption>
+                        <img id="computerWeapon" class="alienWeapon" src="../img/Weapons/Meteor.png" alt="This is a photo2">
+                        <figcaption id="computer" class="fig2 protest-strike-regular">Meteor</figcaption>
                     </figure>  
             </div>
         </div> 
         
-        <div class="column footer-container">
+        <div class="column">
             <footer>
                 <div class="footer-flex">
                     <h1 class="audiowide-regular">CHOOSE YOUR WEAPON</h1>
                     <div class="footer-flex-container">
-                        <button class="protest-strike-regular" id="Rock">Meteor</button>
-                        <button class="protest-strike-regular">Force Field</button>
-                        <button class="protest-strike-regular">Laser Beam</button>
+                        <button class="protest-strike-regular" id="Meteor">Meteor</button>
+                        <button id="Force-Field" class="protest-strike-regular">Force Field</button>
+                        <button id="Laser-beam" class="protest-strike-regular">Laser Beam</button>
                     </div>
                 </div>
                 
