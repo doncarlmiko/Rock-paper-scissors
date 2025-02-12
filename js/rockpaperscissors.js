@@ -4,6 +4,10 @@ const scissorsHumanChoice = document.querySelector('#Laser-beam');//Laser beam
 
 const paperHumanChoice = document.querySelector('#Force-Field');//Paper
 
+//The images of the weapons
+const humanWeapon = document.querySelector('#humanWeapon');
+const computerWeapon = document.querySelector('#computerWeapon');
+
 //Counts the total score of each players
 let humanScore = 0;
 let computerScore = 0;
@@ -21,6 +25,7 @@ rockHumanChoice.addEventListener('click', ()=>{
 
     countRockClick++;
 
+    humanWeapon.src='../img/Weapons/Meteor.png';
     const computerWinner = getComputerChoice();
     const humanChoice = rockHumanChoice.id;
 
@@ -38,6 +43,8 @@ scissorsHumanChoice.addEventListener('click',()=>{
 
     countScissorClick++;
 
+    humanWeapon.src='../img/Weapons/Laser beam.png';
+
     const computerWinner = getComputerChoice();
     const humanChoice = scissorsHumanChoice.id;
 
@@ -53,6 +60,8 @@ scissorsHumanChoice.addEventListener('click',()=>{
 paperHumanChoice.addEventListener('click', ()=>{
 
     countPaperClick++;
+
+    humanWeapon.src='../img/Weapons/Force field.png';
 
     const computerWinner = getComputerChoice();
     const humanChoice = paperHumanChoice.id;
@@ -77,16 +86,21 @@ paperHumanChoice.addEventListener('click', ()=>{
 
         //If RandomNumber is equal to 0 return Rock
         if (RandomNumber === 0){
+            //set the image of each choices.
+            computerWeapon.src='../img/Weapons/Meteor.png';
+            
             return Meteor;
         }
 
         //If RandomNumber is equal to 1 return Paper
         else if (RandomNumber === 1){
+            computerWeapon.src='../img/Weapons/Force field.png';
             return forceField;
         }
 
         //If RandomNumber is equal to 2 return Scissors
         else if (RandomNumber === 2){
+            computerWeapon.src='../img/Weapons/Laser beam.png';
             return laserBeam;
         }
     }
