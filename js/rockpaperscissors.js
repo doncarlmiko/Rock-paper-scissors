@@ -1,6 +1,8 @@
-const rockHumanChoice = document.querySelector('#Rock');
-const scissorsHumanChoice = document.querySelector('#Scissors');
-const paperHumanChoice = document.querySelector('#Paper');
+const rockHumanChoice = document.querySelector('#Meteor');// Rock
+
+const scissorsHumanChoice = document.querySelector('#Laser-beam');//Laser beam
+
+const paperHumanChoice = document.querySelector('#Force-Field');//Paper
 
 //Counts the total score of each players
 let humanScore = 0;
@@ -14,7 +16,7 @@ let countPaperClick = 0;
 
 //Button event handlers for getting the winner
 
-//Getting the winner for Rock
+//Getting the winner for Rock (Meteor)
 rockHumanChoice.addEventListener('click', ()=>{
 
     countRockClick++;
@@ -31,7 +33,7 @@ rockHumanChoice.addEventListener('click', ()=>{
 
 });
 
-//Getting the winner for Scissors
+//Getting the winner for Scissors(Laser beam)
 scissorsHumanChoice.addEventListener('click',()=>{
 
     countScissorClick++;
@@ -47,7 +49,7 @@ scissorsHumanChoice.addEventListener('click',()=>{
     playRound(humanPaperWinner,computerWinner, humanChoice);
 });
 
-//Getting the winner for Paper
+//Getting the winner for Paper(force Field)
 paperHumanChoice.addEventListener('click', ()=>{
 
     countPaperClick++;
@@ -66,26 +68,26 @@ paperHumanChoice.addEventListener('click', ()=>{
 
     //Create a function getComputerChoice
     function getComputerChoice(){
-        const Rock = 'Rock';
-        const Paper = 'Paper';
-        const Scissors = 'Scissors';
+        const Meteor = 'Meteor';
+        const forceField = 'Force-Field';
+        const laserBeam = 'Laser-beam';
 
         //put Math.floor(Math.random() * 3) in RandomNumber
         const RandomNumber = Math.floor(Math.random() * 3);
 
         //If RandomNumber is equal to 0 return Rock
         if (RandomNumber === 0){
-            return Rock;
+            return Meteor;
         }
 
         //If RandomNumber is equal to 1 return Paper
         else if (RandomNumber === 1){
-            return Paper;
+            return forceField;
         }
 
         //If RandomNumber is equal to 2 return Scissors
         else if (RandomNumber === 2){
-            return Scissors;
+            return laserBeam;
         }
     }
 
