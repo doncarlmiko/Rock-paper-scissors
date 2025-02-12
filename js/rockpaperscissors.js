@@ -92,7 +92,7 @@ paperHumanChoice.addEventListener('click', ()=>{
 
 //create a function playRound()
 function playRound(humanWinner, computerWinner, humanChoice){
-    const roundNumber = document.querySelector('#Round');
+   // const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
 
     //The selected option of the human player and the computer
@@ -118,7 +118,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
             
-            roundNumber.textContent=` ${totalButtonCount}`;
+            //roundNumber.textContent=` ${totalButtonCount}`;
 
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
@@ -130,7 +130,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            roundNumber.textContent=` ${totalButtonCount}`;
+            //roundNumber.textContent=` ${totalButtonCount}`;
 
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
@@ -145,7 +145,7 @@ function playRound(humanWinner, computerWinner, humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            roundNumber.textContent=` ${totalButtonCount}`;
+            //roundNumber.textContent=` ${totalButtonCount}`;
 
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
