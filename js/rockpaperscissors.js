@@ -1,7 +1,5 @@
 const rockHumanChoice = document.querySelector('#Meteor');// Rock
 
-// nice code
-
 const scissorsHumanChoice = document.querySelector('#Laser-beam');//Laser beam
 
 const paperHumanChoice = document.querySelector('#Force-Field');//Paper
@@ -13,6 +11,8 @@ const computerWeapon = document.querySelector('#computerWeapon');
 //Counts the total score of each players
 let humanScore = 0;
 let computerScore = 0;
+
+let resultWinner;
 
 //Button event handlers for getting the winner
 
@@ -85,8 +85,6 @@ function playRound(humanChoice){
 
     const humanFinalScore = document.querySelector('#humanScore');
     const computerFinalScore = document.querySelector('#computerScore');
-
-    let resultWinner;
 
     const winningMoves ={
         'Meteor':'Laser-beam',
