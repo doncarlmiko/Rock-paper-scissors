@@ -12,66 +12,34 @@ const computerWeapon = document.querySelector('#computerWeapon');
 let humanScore = 0;
 let computerScore = 0;
 
-//Count the number of times each button was clicked.
-let countRockClick = 0;
-let countScissorClick = 0;
-let countPaperClick = 0;
-
-
 //Button event handlers for getting the winner
 
 //Getting the winner for Rock (Meteor)
 rockHumanChoice.addEventListener('click', ()=>{
-
-    countRockClick++;
-
     humanWeapon.src='../img/Weapons/Meteor.png';
-    const computerWinner = getComputerChoice();
+    
     const humanChoice = rockHumanChoice.id;
 
-    const humanRockWinner = 
-    computerWinner == scissorsHumanChoice.id ? rockHumanChoice.id : 
-    computerWinner == paperHumanChoice.id ? 
-    false : `It's a tie!`;
-
-    playRound(humanRockWinner,computerWinner, humanChoice);
+    playRound(humanChoice);
 
 });
 
 //Getting the winner for Scissors(Laser beam)
 scissorsHumanChoice.addEventListener('click',()=>{
-
-    countScissorClick++;
-
     humanWeapon.src='../img/Weapons/Laser beam.png';
 
-    const computerWinner = getComputerChoice();
     const humanChoice = scissorsHumanChoice.id;
 
-    const humanPaperWinner = 
-    computerWinner == paperHumanChoice.id ? scissorsHumanChoice.id : 
-    computerWinner == rockHumanChoice.id ? false : 
-    `It's a tie!`;
-
-    playRound(humanPaperWinner,computerWinner, humanChoice);
+    playRound(humanChoice);
 });
 
 //Getting the winner for Paper(force Field)
 paperHumanChoice.addEventListener('click', ()=>{
-
-    countPaperClick++;
-
     humanWeapon.src='../img/Weapons/Force field.png';
 
-    const computerWinner = getComputerChoice();
     const humanChoice = paperHumanChoice.id;
 
-    const humanScissorWinner = 
-    computerWinner == rockHumanChoice.id ? paperHumanChoice.id: 
-    computerWinner == scissorsHumanChoice.id ? false : 
-    `It's a tie!`;
-
-    playRound(humanScissorWinner,computerWinner, humanChoice);
+    playRound(humanChoice);
 });
 
 
@@ -107,7 +75,7 @@ paperHumanChoice.addEventListener('click', ()=>{
 
 
 //create a function playRound()
-function playRound(humanWinner, computerWinner, humanChoice){
+function playRound(humanChoice){
    // const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
 
@@ -120,9 +88,20 @@ function playRound(humanWinner, computerWinner, humanChoice){
 
     let resultWinner;
 
-    //Add the total number of clicks of all the buttons: Rock, paper, scissors.
-    let totalButtonCount = countRockClick + countScissorClick + countPaperClick;
-    
+    const winningMoves ={
+        'Meteor':'Laser-beam',
+        'Force-Field':'Meteor',
+        'Laser-beam':'Force-Field'
+    }
+
+    const computerWinner = getComputerChoice();
+
+    const humanWinner = 
+    computerWinner == winningMoves[humanChoice] ? humanChoice : 
+    computerWinner == humanChoice ? `It's a tie!`:
+    false ;
+
+
     //play each round of the game
         if(humanWinner === false){
             roundResult.textContent=' You Lose this Round!';
