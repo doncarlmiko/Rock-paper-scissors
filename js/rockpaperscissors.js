@@ -1,5 +1,7 @@
 const rockHumanChoice = document.querySelector('#Meteor');// Rock
 
+// nice code
+
 const scissorsHumanChoice = document.querySelector('#Laser-beam');//Laser beam
 
 const paperHumanChoice = document.querySelector('#Force-Field');//Paper
@@ -42,7 +44,6 @@ paperHumanChoice.addEventListener('click', ()=>{
     playRound(humanChoice);
 });
 
-
     //Create a function getComputerChoice
     function getComputerChoice(){
         const Meteor = 'Meteor';
@@ -76,7 +77,6 @@ paperHumanChoice.addEventListener('click', ()=>{
 
 //create a function playRound()
 function playRound(humanChoice){
-   // const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
 
     //The selected option of the human player and the computer
