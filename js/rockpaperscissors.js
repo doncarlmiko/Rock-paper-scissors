@@ -12,7 +12,6 @@ const computerWeapon = document.querySelector('#computerWeapon');
 let humanScore = 0;
 let computerScore = 0;
 
-let resultWinner;
 
 //Button event handlers for getting the winner
 
