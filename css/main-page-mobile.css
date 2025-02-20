@@ -127,18 +127,21 @@ figcaption{
 .humanWeaponDefault{
 	max-width:100%;
 	max-height:100%;
+	margin-inline-start: 10%;
+	margin-inline-end: 10%;
 }
 
 .alienWeaponDefault{
 	max-width:100%;
 	max-height:100%;
+	margin-inline-start: 10%;
+	margin-inline-end: 10%;
 }
 
 .alienWeaponDefault,.humanWeaponDefault{
-	width: min(15dvh,10.8125rem);
-	height: min(15dvh,8rem);
+	width: min(10dvh,10.8125rem);
+	height: min(10dvh,8rem);
 	align-items: center;
-	margin-inline-start: 1ch;
 }
 
 .fig-label{
@@ -147,6 +150,7 @@ figcaption{
 	position:relative;
 	bottom:min(1dvh, 4rem);
 	width: 100%;
+	margin-inline-start: 10%;
 }
 
 
