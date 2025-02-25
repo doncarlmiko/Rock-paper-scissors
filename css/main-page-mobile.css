@@ -57,13 +57,12 @@ body{
 	flex-wrap: nowrap;
 }
 
-.Score{
+.humanScore{
 	font-size: var(--score-font-size);
 	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 0;
 	text-align: center;
 	flex-basis: 100%;
 	flex-grow: 1;
@@ -85,7 +84,7 @@ body{
   }
 
 .flex-child{
-	flex-basis: 35%;
+	flex-basis: 40%;
 	margin:auto;
 	flex-shrink: 1;
 }
@@ -108,57 +107,21 @@ figcaption{
 .Astronaut{
 	max-width:100%;
 	max-height:100%;
-	width: min(35dvh,10rem);
-	height: min(35dvh,12rem);
+	width: min(100vw,10rem);
+	height: min(60vw,14rem);
 }	
 
 .Alien{
 	max-width:100%;
 	max-height:100%;
-
-	width: min(25dvh,9rem);
-	height: min(20dvh,10rem);
-
-	width: min(20dvh,9rem);
-	height: min(20dvh,8rem);
-
+	width: min(100vw,9rem);
+	height: min(60vw,10rem);
 }
 
 .alien-flex-child{
 	padding-block-start: min(5vh,3rem);
 	padding-inline-start:min(2vh,2rem);
 }
-
-/* Default image when no weapons are selected yet.*/
-.humanWeaponDefault{
-	max-width:100%;
-	max-height:100%;
-	margin-inline-start: 10%;
-	margin-inline-end: 10%;
-}
-
-.alienWeaponDefault{
-	max-width:100%;
-	max-height:100%;
-	margin-inline-start: 10%;
-	margin-inline-end: 10%;
-}
-
-.alienWeaponDefault,.humanWeaponDefault{
-	width: min(10dvh,10.8125rem);
-	height: min(10dvh,8rem);
-	align-items: center;
-}
-
-.fig-label{
-	font-size: var(--weapon-font-size);
-	text-align: justify;
-	position:relative;
-	bottom:min(1dvh, 4rem);
-	width: 100%;
-	margin-inline-start: 10%;
-}
-
 
 /*-- Selected weapons of each player --*/
 .humanWeapon{
@@ -174,6 +137,7 @@ figcaption{
 .alienWeapon,.humanWeapon{
 	width: min(100vw,10.8125rem);
 	height: min(60vw,20rem);
+	
 }
 
 /*-- Human weapon button choices --*/
@@ -262,3 +226,5 @@ button:hover{
 		margin-right: 16%;
 	  }
 }
+
+
