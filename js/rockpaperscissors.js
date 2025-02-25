@@ -12,7 +12,6 @@ const computerWeapon = document.querySelector('#computerWeapon');
 let humanScore = 0;
 let computerScore = 0;
 
-
 //Button event handlers for getting the winner
 
 //Getting the winner for Rock (Meteor)
@@ -42,6 +41,7 @@ paperHumanChoice.addEventListener('click', ()=>{
 
     playRound(humanChoice);
 });
+
 
     //Create a function getComputerChoice
     function getComputerChoice(){
@@ -76,6 +76,7 @@ paperHumanChoice.addEventListener('click', ()=>{
 
 //create a function playRound()
 function playRound(humanChoice){
+   // const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
 
     //The selected option of the human player and the computer
@@ -84,6 +85,8 @@ function playRound(humanChoice){
 
     const humanFinalScore = document.querySelector('#humanScore');
     const computerFinalScore = document.querySelector('#computerScore');
+
+    let resultWinner;
 
     const winningMoves ={
         'Meteor':'Laser-beam',
@@ -165,4 +168,5 @@ function getFinalWinner(humanScore,computerScore,resultWinner){
     }
      
 }
+
 
