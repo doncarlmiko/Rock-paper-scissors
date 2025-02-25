@@ -57,7 +57,7 @@ body{
 	flex-wrap: nowrap;
 }
 
-.humanScore{
+.Score{
 	font-size: var(--score-font-size);
 	padding-inline: clamp(10vw, 5vw + 1rem, 10rem);
 	margin-top: 0;
