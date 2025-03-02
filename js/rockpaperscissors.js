@@ -1,39 +1,56 @@
-const rockHumanChoice = document.querySelector('#Meteor');// Rock
+// Rock
+const rockHumanChoice = document.querySelector('#Meteor');
 
-const scissorsHumanChoice = document.querySelector('#Laser-beam');//Laser beam
+//Laser beam
+const scissorsHumanChoice = document.querySelector('#Laser-beam');
 
-const paperHumanChoice = document.querySelector('#Force-Field');//Paper
+//Paper
+const paperHumanChoice = document.querySelector('#Force-Field');
 
 //The images of the weapons
-const humanWeapon = document.querySelector('#humanWeapon');
-const computerWeapon = document.querySelector('#computerWeapon');
+const humanWeapon = document.querySelector('#humanweapon');
+const computerWeapon = document.querySelector('#computerweapon');
+const rotateHumanWeapon = document.querySelector('#humanWeaponFigure');
+const rotateComputerWeapon = document.querySelector('#computerWeaponFigure');
+
+//change the class for weapon image
+const changeWeaponImg = document.querySelectorAll('button');
+
+const showWeaponName = document.querySelectorAll('.fig1');
 
 //Counts the total score of each players
 let humanScore = 0;
 let computerScore = 0;
 
-//Button event handlers for getting the winner
+changeWeaponImg.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+        humanWeapon.className='humanWeapon';
+        computerWeapon.className='alienWeapon';
+    });
+});
 
-//Getting the winner for Rock (Meteor)
+//Button for Rock choice (Meteor)
 rockHumanChoice.addEventListener('click', ()=>{
     humanWeapon.src='../img/Weapons/Meteor.png';
     
+    //rotate the image weapon
+    humanWeapon.classList.add('flipImg');
+
     const humanChoice = rockHumanChoice.id;
 
     playRound(humanChoice);
-
 });
 
-//Getting the winner for Scissors(Laser beam)
+//Button for Scissors choice(Laser beam)
 scissorsHumanChoice.addEventListener('click',()=>{
     humanWeapon.src='../img/Weapons/Laser beam.png';
 
     const humanChoice = scissorsHumanChoice.id;
-
+    
     playRound(humanChoice);
 });
 
-//Getting the winner for Paper(force Field)
+//Button for Paper choice (force Field)
 paperHumanChoice.addEventListener('click', ()=>{
     humanWeapon.src='../img/Weapons/Force field.png';
 
@@ -41,40 +58,32 @@ paperHumanChoice.addEventListener('click', ()=>{
 
     playRound(humanChoice);
 });
-
-
     //Create a function getComputerChoice
     function getComputerChoice(){
         const Meteor = 'Meteor';
         const forceField = 'Force-Field';
         const laserBeam = 'Laser-beam';
 
-        //put Math.floor(Math.random() * 3) in RandomNumber
+        //Generates a RandomNumber
         const RandomNumber = Math.floor(Math.random() * 3);
 
-        //If RandomNumber is equal to 0 return Rock
+        
+        //set the image of each choices.
         if (RandomNumber === 0){
-            //set the image of each choices.
             computerWeapon.src='../img/Weapons/Meteor.png';
-            
             return Meteor;
         }
-
-        //If RandomNumber is equal to 1 return Paper
         else if (RandomNumber === 1){
             computerWeapon.src='../img/Weapons/Force field.png';
             return forceField;
         }
-
-        //If RandomNumber is equal to 2 return Scissors
         else if (RandomNumber === 2){
             computerWeapon.src='../img/Weapons/Laser beam.png';
+            computerWeapon.classList.add('flipImg');
             return laserBeam;
         }
     }
 
-
-//create a function playRound()
 function playRound(humanChoice){
    // const roundNumber = document.querySelector('#Round');
     const roundResult = document.querySelector('#result');
@@ -83,11 +92,17 @@ function playRound(humanChoice){
     const humanPick = document.querySelector('#human');
     const computerPick= document.querySelector('#computer');
 
+    //show weapon name
+    showWeaponName.forEach((showWeapon)=>{
+        showWeapon.style.display='block';
+    });
+
     const humanFinalScore = document.querySelector('#humanScore');
     const computerFinalScore = document.querySelector('#computerScore');
 
     let resultWinner;
 
+    //Pair of weapons where they defeat the other one.
     const winningMoves ={
         'Meteor':'Laser-beam',
         'Force-Field':'Meteor',
@@ -101,7 +116,6 @@ function playRound(humanChoice){
     computerWinner == humanChoice ? `It's a tie!`:
     false ;
 
-
     //play each round of the game
         if(humanWinner === false){
             roundResult.textContent=' You Lose this Round!';
@@ -112,8 +126,6 @@ function playRound(humanChoice){
             
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
-            
-            //roundNumber.textContent=` ${totalButtonCount}`;
 
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
@@ -125,13 +137,12 @@ function playRound(humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            //roundNumber.textContent=` ${totalButtonCount}`;
-
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
     
         else if (humanWinner === humanChoice){
             roundResult.textContent=' You Win this Round!';
+           
             humanPick.textContent=humanChoice;
             computerPick.textContent=computerWinner;
 
@@ -139,8 +150,6 @@ function playRound(humanChoice){
 
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
-
-            //roundNumber.textContent=` ${totalButtonCount}`;
 
             getFinalWinner(humanScore,computerScore,resultWinner);
         }
@@ -155,7 +164,6 @@ function playRound(humanChoice){
 
 //get the Final winner
 function getFinalWinner(humanScore,computerScore,resultWinner){
-
     //Display the result of the Winner
     if((humanScore === 5 || computerScore === 5) && humanScore > computerScore){
         resultWinner=alert('Congratulations! You win the game!');
