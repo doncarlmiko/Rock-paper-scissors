@@ -167,12 +167,15 @@ function getFinalWinner(humanScore,computerScore,resultWinner){
     //Display the result of the Winner
     if((humanScore === 5 || computerScore === 5) && humanScore > computerScore){
         resultWinner=alert('Congratulations! You win the game!');
+        location.reload();
     }
     else if((humanScore === 5 || computerScore === 5) && humanScore < computerScore){
         resultWinner= alert('You lose! Better luck next time.');
+        location.reload();
     }
     else if((humanScore === 5 || computerScore === 5) && humanScore === computerScore){
         resultWinner= alert(`It's a tie game!`);
+        location.reload();
     }
      
 }
