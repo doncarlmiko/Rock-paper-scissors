@@ -171,20 +171,28 @@ function getFinalWinner(humanScore,computerScore){
     //Display the result of the Winner
     if(humanScore === 5 || computerScore === 5){
         if (humanScore > computerScore) {
-            resultWinner = "Congratulations! You win the game!";
+            resultWinner = "You Win! The Earth is safe.";
         } else if (humanScore < computerScore) {
-            resultWinner = "You lose! Better luck next time.";
+            resultWinner = "You lose! The Earth is invaded.";
         } else {
             resultWinner = "It's a tie game!";
         }
 
+        //Delay the pop up modal message by one second
         finalWinnerTimeOut = setTimeout(()=>{
             const modal=document.querySelector('#myModal');
+            const playAgain=document.querySelector('#playAgainButton');
+
             const closeModal = document.querySelectorAll(".close");
             const message=document.querySelector('.resultMessage');
 
+            //Display the modal and the result message
             message.textContent=resultWinner;
             modal.style.display = "block";
+
+            playAgain.addEventListener('click',()=>{
+                location.reload();
+            });
 
             closeModal.forEach((closeModal)=>{
                 closeModal.addEventListener('click',()=>{
@@ -192,7 +200,7 @@ function getFinalWinner(humanScore,computerScore){
                 });
             });
 
-        },500);
+        },1000);
     }
     
 }
