@@ -179,9 +179,20 @@ function getFinalWinner(humanScore,computerScore){
         }
 
         finalWinnerTimeOut = setTimeout(()=>{
-            console.log(resultWinner);
-            console.log(finalWinnerTimeOut);
-        },2000);
+            const modal=document.querySelector('#myModal');
+            const closeModal = document.querySelectorAll(".close");
+            const message=document.querySelector('.resultMessage');
+
+            message.textContent=resultWinner;
+            modal.style.display = "block";
+
+            closeModal.forEach((closeModal)=>{
+                closeModal.addEventListener('click',()=>{
+                    modal.style.display = "none";
+                });
+            });
+
+        },500);
     }
     
 }
