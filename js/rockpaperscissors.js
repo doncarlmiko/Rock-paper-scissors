@@ -100,8 +100,6 @@ function playRound(humanChoice){
     const humanFinalScore = document.querySelector('#humanScore');
     const computerFinalScore = document.querySelector('#computerScore');
 
-    let resultWinner;
-
     //Pair of weapons where they defeat the other one.
     const winningMoves ={
         'Meteor':'Laser-beam',
@@ -127,7 +125,7 @@ function playRound(humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            getFinalWinner(humanScore,computerScore,resultWinner);
+            getFinalWinner(humanScore,computerScore);
         }
         else if(computerWinner === humanChoice){
             roundResult.textContent= humanWinner;
@@ -137,7 +135,7 @@ function playRound(humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            getFinalWinner(humanScore,computerScore,resultWinner);
+            getFinalWinner(humanScore,computerScore);
         }
     
         else if (humanWinner === humanChoice){
@@ -151,7 +149,8 @@ function playRound(humanChoice){
             humanFinalScore.textContent=humanScore;
             computerFinalScore.textContent=computerScore;
 
-            getFinalWinner(humanScore,computerScore,resultWinner);
+            getFinalWinner(humanScore,computerScore);
+            
         }
 
     //disable the three buttons when it is already five rounds
@@ -162,22 +161,49 @@ function playRound(humanChoice){
     }
 }
 
-//get the Final winner
-function getFinalWinner(humanScore,computerScore,resultWinner){
-    //Display the result of the Winner
-    if((humanScore === 5 || computerScore === 5) && humanScore > computerScore){
-        resultWinner=alert('Congratulations! You win the game!');
-        location.reload();
-    }
-    else if((humanScore === 5 || computerScore === 5) && humanScore < computerScore){
-        resultWinner= alert('You lose! Better luck next time.');
-        location.reload();
-    }
-    else if((humanScore === 5 || computerScore === 5) && humanScore === computerScore){
-        resultWinner= alert(`It's a tie game!`);
-        location.reload();
-    }
-     
-}
+//Delay the winner result message
+//const resultMessageTimer = setTimeout(getFinalWinner, 2000);
 
+//get the Final winner
+let finalWinnerTimeOut; // Store the timeout ID
+function getFinalWinner(humanScore,computerScore){
+    let resultWinner ="";
+    const imgMessage= document.querySelector('.messageImg');
+    //Display the result of the Winner
+    if(humanScore === 5 || computerScore === 5){
+        if (humanScore > computerScore) {
+            resultWinner = "You Win! The Earth is safe.";
+            imgMessage.src='../img/image for desktop and mobile/Astronaut wins game.png';
+        } else if (humanScore < computerScore) {
+            resultWinner = "You lose! The Earth is invaded.";
+            imgMessage.src='../img/image for desktop and mobile/Alien wins.png';
+        } else {
+            resultWinner = "It's a tie game!";
+        }
+
+        //Delay the pop up modal message by one second
+        finalWinnerTimeOut = setTimeout(()=>{
+            const modal=document.querySelector('#myModal');
+            const playAgain=document.querySelector('#playAgainButton');
+
+            const closeModal = document.querySelectorAll(".closePage");
+            const message=document.querySelector('.resultMessage');
+
+            //Display the modal and the result message
+            message.textContent=resultWinner;
+            modal.style.display = "block";
+
+            playAgain.addEventListener('click',()=>{
+                location.reload();
+            });
+
+            closeModal.forEach((closeModal)=>{
+                closeModal.addEventListener('click',()=>{
+                    modal.style.display = "none";
+                });
+            });
+        },1500);
+    }
+    
+}
 
