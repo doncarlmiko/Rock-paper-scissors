@@ -194,7 +194,6 @@ button:hover{
 	top: 0;
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
 	background-color: rgb(172, 33, 33); /* Fallback color */
 	background-color: rgba(190, 35, 35, 0.4); /* Black w/ opacity */
   }
@@ -202,7 +201,7 @@ button:hover{
   /* Modal Content/Box */
   .modal-content {
 	background-color: rgba(22, 23, 24, 85%);
-	margin: 5% auto; /* 15% from the top and centered */
+	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #090808;
 	width: 100%; /* Could be more or less, depending on screen size */
@@ -218,6 +217,7 @@ button:hover{
 
 .contentContainer > h1{
 	font-size:var(--subheading1-font-size);
+	text-align: center;
 }
 
 .messageImg{
@@ -240,7 +240,7 @@ button:hover{
 	font-size: 28px;
 	font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
 	color: rgba(245, 123, 123, 0.4);

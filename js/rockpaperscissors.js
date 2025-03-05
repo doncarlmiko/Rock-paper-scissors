@@ -168,12 +168,15 @@ function playRound(humanChoice){
 let finalWinnerTimeOut; // Store the timeout ID
 function getFinalWinner(humanScore,computerScore){
     let resultWinner ="";
+    const imgMessage= document.querySelector('.messageImg');
     //Display the result of the Winner
     if(humanScore === 5 || computerScore === 5){
         if (humanScore > computerScore) {
             resultWinner = "You Win! The Earth is safe.";
+            imgMessage.src='../img/image for desktop and mobile/Astronaut wins game.png';
         } else if (humanScore < computerScore) {
             resultWinner = "You lose! The Earth is invaded.";
+            imgMessage.src='../img/image for desktop and mobile/Alien wins.png';
         } else {
             resultWinner = "It's a tie game!";
         }
@@ -183,7 +186,7 @@ function getFinalWinner(humanScore,computerScore){
             const modal=document.querySelector('#myModal');
             const playAgain=document.querySelector('#playAgainButton');
 
-            const closeModal = document.querySelectorAll(".close");
+            const closeModal = document.querySelectorAll(".closePage");
             const message=document.querySelector('.resultMessage');
 
             //Display the modal and the result message
@@ -199,8 +202,7 @@ function getFinalWinner(humanScore,computerScore){
                     modal.style.display = "none";
                 });
             });
-
-        },1000);
+        },1500);
     }
     
 }
