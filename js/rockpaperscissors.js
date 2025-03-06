@@ -190,8 +190,8 @@ function getFinalWinner(humanScore,computerScore){
             const message=document.querySelector('.resultMessage');
 
             //Display the modal and the result message
+            modal.style.display='block';
             message.textContent=resultWinner;
-            modal.style.display = "block";
 
             playAgain.addEventListener('click',()=>{
                 location.reload();
@@ -204,6 +204,5 @@ function getFinalWinner(humanScore,computerScore){
             });
         },1500);
     }
-    
 }
 
