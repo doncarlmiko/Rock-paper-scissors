@@ -205,7 +205,7 @@ function getFinalWinner(humanScore,computerScore){
                     modal.style.display = "none";
                 });
             });
-        },500);
+        },400);
     }
 }
 

@@ -1,10 +1,3 @@
-*,
-*::before,
-*::after{
-	box-sizing: border-box;
-	
-}
-
 body{
 	margin: 0;
 	background-image: url("../img/image for desktop and mobile/Universe back ground.jpg");
@@ -14,32 +7,6 @@ body{
 	color: #FFFFFF;
 	
 }
-
-
-:root{
-	--header-main:2.7rem;
-	--main-heading-font-size: clamp(2.6rem, 5vw + 1rem, 3.75rem);
-	--subheading1-font-size: clamp(1.25rem, 2vw + 1rem, 1.875rem);
-	--score-font-size: clamp(1.5625rem, 5vw + 1rem, 2.5rem);
-	--weapon-font-size: clamp(1.25rem, 2vw + 1rem, 1.8rem);
-	--weapon-human-font-size: clamp(0.8rem, 5vw + 1rem, 1.25rem);
-	--choose-weapon-font-size:clamp(1.25rem, 2vw + 1rem, 2.5rem);
-
-	--button-color: #99511A;
-  }
-
-  /*-----------------Font styles -----------------------*/
-.protest-strike-regular {
-	font-family: "Protest Strike", serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-
-.audiowide-regular {
-	font-family: "Audiowide", serif;
-	font-weight: 400;
-	font-style: normal;
-  }
 
 /*-- header ---*/
 .main-header{
@@ -204,13 +171,13 @@ button:hover{
 	opacity: 0;
 	transform: scale(0.8);
 	visibility: hidden;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
 	background-color: rgba(22, 23, 24, 85%);
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #090808;
 	width: 100%; /* Could be more or less, depending on screen size */
-	transition-duration: 200ms;
-	transition-timing-function: ease-in-out;
 }
  /*Modal content*/
 .contentContainer{
@@ -302,6 +269,10 @@ button:hover{
 		bottom:min(4rem, 20vh);
 	}
 
+	.modal-content{
+		margin: 10% auto;
+		max-width: 50%;
+	}
 	
 	.item-2{order:4;}
 	.item-3{order:2;}

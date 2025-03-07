@@ -1,0 +1,10 @@
+body{
+	margin: 0;
+	background-image: url("../img/image for desktop and mobile/Human and Aliens.jpg");
+    background-size:100dvh;
+	background-position:80dvh,2000px;
+	background-clip:content-box;
+	color: #FFFFFF;
+	
+}
+
