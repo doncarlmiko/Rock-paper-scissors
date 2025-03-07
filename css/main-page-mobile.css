@@ -187,7 +187,9 @@ button:hover{
 }
 
 .modal {
-	display: none; /* Hidden by default */
+	opacity: 0;
+	transform: scale(1);
+	visibility: hidden;
 	position: fixed; /* Stay in place */
 	z-index: 12; /* Sit on top */
 	left: 0;
@@ -196,15 +198,19 @@ button:hover{
 	height: 100%; /* Full height */
 	background-color: rgb(172, 33, 33); /* Fallback color */
 	background-color: rgba(190, 35, 35, 0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+}  
+  /* Modal Content Box */
+.modal-content {
+	opacity: 0;
+	transform: scale(0.8);
+	visibility: hidden;
 	background-color: rgba(22, 23, 24, 85%);
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #090808;
 	width: 100%; /* Could be more or less, depending on screen size */
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
 }
  /*Modal content*/
 .contentContainer{
@@ -213,6 +219,13 @@ button:hover{
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-items: center;
+}
+
+/*Modal transition*/
+.modal-content.show , .modal.show {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
 }
 
 .contentContainer > h1{
