@@ -169,6 +169,9 @@ let finalWinnerTimeOut; // Store the timeout ID
 function getFinalWinner(humanScore,computerScore){
     let resultWinner ="";
     const imgMessage= document.querySelector('.messageImg');
+    const modal=document.querySelector('.modal');
+    const modalContent=document.querySelector('.modal-content');
+
     //Display the result of the Winner
     if(humanScore === 5 || computerScore === 5){
         if (humanScore > computerScore) {
@@ -181,16 +184,16 @@ function getFinalWinner(humanScore,computerScore){
             resultWinner = "It's a tie game!";
         }
 
-        //Delay the pop up modal message by one second
-        finalWinnerTimeOut = setTimeout(()=>{
-            const modal=document.querySelector('#myModal');
-            const playAgain=document.querySelector('#playAgainButton');
+        modal.classList.add("show");
 
+        //Delay the pop up modal message
+        finalWinnerTimeOut = setTimeout(()=>{
+            const playAgain=document.querySelector('#playAgainButton');
             const closeModal = document.querySelectorAll(".closePage");
             const message=document.querySelector('.resultMessage');
 
             //Display the modal and the result message
-            modal.style.display='block';
+            modalContent.classList.add("show");
             message.textContent=resultWinner;
 
             playAgain.addEventListener('click',()=>{
@@ -202,7 +205,7 @@ function getFinalWinner(humanScore,computerScore){
                     modal.style.display = "none";
                 });
             });
-        },1500);
+        },500);
     }
 }
 
