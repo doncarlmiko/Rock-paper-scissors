@@ -32,8 +32,6 @@
 
 /*Button styles for weapon selection*/
   button{
-	width: min(100vw,7.3125rem);
-	height: min(60vw,2.5rem);
 	font-size: var(--weapon-human-font-size);
 	margin: min(60vw, 1rem);
 	border: none;
