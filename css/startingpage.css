@@ -1,10 +1,27 @@
 body{
 	margin: 0;
 	background-image: url("../img/image for desktop and mobile/Human and Aliens.jpg");
-    background-size:100dvh;
-	background-position:80dvh,2000px;
-	background-clip:content-box;
+    background-size:150dvh;
+	background-position:left top;
+    background-position-x: -26.5rem;
+   
 	color: #FFFFFF;
 	
 }
 
+header{
+    margin-block-start: min(12vh, 10rem);
+}
+
+header > h1{
+    font-size: var(--main-heading-font-size);
+    text-align: center;
+}
+
+.Astronaut{
+    width: min(20dvh, 23.4375rem);
+}
+
+.Alien{
+    width: min(100dvh, 10rem);
+}
