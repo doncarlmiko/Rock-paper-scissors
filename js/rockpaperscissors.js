@@ -1,9 +1,9 @@
-//localStorage.setItem("visitedStartingPage", "true");
+localStorage.setItem("visitedStartingPage", "true");
 
 // Check if the starting page was visited
-/*if (!localStorage.getItem("visitedStartingPage")) {
-    window.location.href = "/html/starting page.html"; // Redirect to the starting page
-}*/
+if (!localStorage.getItem("visitedStartingPage")) {
+    window.location.href = "../html/starting page.html"; // Redirect to the starting page
+}
 // Rock
 const rockHumanChoice = document.querySelector('#Meteor');
 
