@@ -29,3 +29,18 @@
 	font-weight: 400;
 	font-style: normal;
   }
+
+/*Button styles for weapon selection*/
+  button{
+	width: min(100vw,7.3125rem);
+	height: min(60vw,2.5rem);
+	font-size: var(--weapon-human-font-size);
+	margin: min(60vw, 1rem);
+	border: none;
+	z-index: 10;
+	background-color: var(--button-color);
+	color: #FFFFFF;
+}
+button:hover{
+	background-color: #9164D1;
+}
