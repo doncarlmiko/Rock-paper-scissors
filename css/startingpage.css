@@ -6,7 +6,6 @@ body{
     background-position-x: -26.5rem;
    
 	color: #FFFFFF;
-	
 }
 
 header{
@@ -18,10 +17,32 @@ header > h1{
     text-align: center;
 }
 
+.img-container{
+    background-color: red;
+    border: yellow solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .Astronaut{
-    width: min(20dvh, 23.4375rem);
+    width: min(20dvh, 19.5625rem);
+    margin-block-end: min(2dvh, 2rem);
 }
 
 .Alien{
-    width: min(100dvh, 10rem);
+    width: min(25dvh, 18.6875rem);
+    margin-block-start: min(2dvh, 2rem);
+}
+
+.img-content{
+    background-color: blue;
+    border: green solid 2px;
+}
+
+.weaponButton{
+	width: min(100dvh,13.0625rem);
+	height: min(10dvh,4.5rem);
+    font-size: clamp(1.875rem, 2vw + 1rem,2.5rem);
+    border-radius: 20px;
 }

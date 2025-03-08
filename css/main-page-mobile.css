@@ -139,6 +139,11 @@ figcaption{
   	justify-content: center;
 }
 
+.weaponButtonSize{
+	width: min(100dvh,7.3125rem);
+	height: min(60vw,2.5rem);
+}
+
 .modal {
 	opacity: 0;
 	transform: scale(1);
