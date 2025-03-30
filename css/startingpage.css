@@ -62,7 +62,7 @@ footer >p{
     font-size: var(--footer-font-size);
 }
 
-@media(min-width:390px){
+@media(min-width:375px){
     .weaponButton{
         font-size: clamp(1.875rem, 2vw + 1rem,2.5rem);
     }
@@ -73,7 +73,7 @@ footer >p{
     }
 }
 
-@media(min-width:800px){
+@media(min-width:768px){
     header > h1{
         margin-block-start: max(10dvh,5rem);
     }
