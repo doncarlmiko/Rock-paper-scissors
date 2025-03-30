@@ -13,6 +13,7 @@
 	--weapon-font-size: clamp(1.25rem, 2vw + 1rem, 1.8rem);
 	--weapon-human-font-size: clamp(0.8rem, 5vw + 1rem, 1.25rem);
 	--choose-weapon-font-size:clamp(1.25rem, 2vw + 1rem, 2.5rem);
+	--footer-font-size:clamp(0.8rem, 2vw + 1rem, 1rem);
 
 	--button-color: #99511A;
   }
